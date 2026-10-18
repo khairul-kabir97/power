@@ -1,0 +1,1675 @@
+/* ==========================================================================
+   1. GLOBAL STYLES, VARIABLES & RESET
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+:root {
+    --bg-dark: #0b1329;
+    --card-bg: rgba(30, 41, 59, 0.65);
+    --card-border: rgba(255, 255, 255, 0.08);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #cbd5e1;
+    --accent-blue: #38bdf8;
+    --accent-green: #22c55e;
+    --accent-green-bright: #4ade80;
+    --accent-red: #ef4444;
+    --accent-warning: #f59e0b;
+    --accent-purple: #a855f7;
+}
+
+body {
+    background-color: var(--bg-dark);
+    background-image:
+        radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.12) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(168, 85, 247, 0.12) 0px, transparent 50%);
+    background-attachment: fixed;
+    color: var(--text-primary);
+    min-height: 100vh;
+    padding-bottom: 60px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 24px 16px;
+}
+
+/* ==========================================================================
+   2. HEADER & GLOBAL STATS BAR
+   ========================================================================== */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding: 20px;
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+}
+
+.header-brand h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header-brand .subtitle {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-top: 4px;
+}
+
+.header-brand .subtitle strong {
+    color: var(--accent-blue);
+}
+
+.header-right-group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.sync-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(15, 23, 42, 0.6);
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--card-border);
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.sync-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.sync-dot.online {
+    background: var(--accent-green);
+    box-shadow: 0 0 8px var(--accent-green);
+}
+
+.btn-icon {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s, transform 0.3s ease;
+}
+
+.btn-icon:hover {
+    color: var(--accent-blue);
+    transform: rotate(180deg);
+}
+
+.global-stats {
+    display: flex;
+    gap: 12px;
+}
+
+.stat-box {
+    background: rgba(15, 23, 42, 0.6);
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: 1px solid var(--card-border);
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-box .label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-box .val {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-top: 2px;
+}
+
+.stat-box .val.online {
+    color: var(--accent-green);
+}
+
+.stat-box .val.warning {
+    color: var(--accent-warning);
+}
+
+/* ==========================================================================
+   3. SEARCH & FILTER BAR
+   ========================================================================== */
+.filter-bar {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+}
+
+.search-wrapper {
+    position: relative;
+    flex: 1;
+    min-width: 280px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    stroke: var(--text-secondary);
+}
+
+.search-wrapper input {
+    width: 100%;
+    padding: 12px 16px 12px 42px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.search-wrapper input:focus {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+
+.select-wrapper select {
+    padding: 12px 16px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    outline: none;
+    cursor: pointer;
+}
+
+.select-wrapper select option {
+    background: #1e293b;
+    color: #ffffff;
+}
+
+
+
+
+/* ==========================================================================
+   4. ROOM GRID & MAIN CARDS
+   ========================================================================== */
+/* ==========================================================================
+   TRANSLUCENT ELECTRONIC MECHANICAL KEYCAP (PURE CSS ANIMATED PCB BASE)
+   ========================================================================== */
+
+/* Main PCB Board Base with Animated Live Electronic Circuits */
+#roomContainer {
+    background-color: #030712;
+    /* Electronic Circuit Line Grid Background Pattern */
+    background-image:
+        radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.15) 0%, transparent 80%),
+        linear-gradient(rgba(56, 189, 248, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56, 189, 248, 0.07) 1px, transparent 1px);
+    background-size: 100% 100%, 30px 30px, 30px 30px;
+    background-position: center center;
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    border-radius: 20px;
+    padding: 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 22px;
+    justify-items: center;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.95), inset 0 0 30px rgba(56, 189, 248, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Pulsing Live Electronic Current Animation on PCB Base */
+#roomContainer::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.08) 0%, transparent 50%);
+    animation: pcbPulse 4s ease-in-out infinite alternate;
+    pointer-events: none;
+}
+
+@keyframes pcbPulse {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.4;
+    }
+
+    100% {
+        transform: scale(1.1);
+        opacity: 0.9;
+    }
+}
+
+
+/* Live Electronic Grid Scanline Animation */
+#roomContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(56, 189, 248, 0.15) 50%,
+            transparent 100%);
+    animation: liveGridFlow 3s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes liveGridFlow {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+/* Round Mechanical Keycap - Translucent Glassmorphic Switch Body */
+.pop-key-btn {
+    /* Translucent Glass Base showing inner mechanics */
+    background: linear-gradient(180deg, rgba(30, 41, 59, 0.75) 0%, rgba(15, 23, 42, 0.85) 60%, rgba(3, 7, 18, 0.95) 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    /* Shiny Chrome Edge Rim (Reference Typewriter Ring) */
+    border: 2px solid rgba(255, 255, 255, 0.28);
+    width: 120px;
+    height: 120px;
+    border-radius: 50% !important;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    transition: all 0.12s cubic-bezier(0.2, 0.8, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+
+    /* 3D Depth + Transparent Switch LED Glow Below */
+    box-shadow:
+        0px 14px 0px #020408,
+        0px 22px 40px rgba(0, 0, 0, 0.95),
+        0px -8px 25px rgba(34, 197, 94, 0.55),
+        8px 0px 25px rgba(56, 189, 248, 0.65),
+        0px 8px 25px rgba(239, 68, 68, 0.55),
+        -8px 0px 25px rgba(168, 85, 247, 0.55),
+        inset 0px 2px 5px rgba(255, 255, 255, 0.5) !important;
+
+    z-index: 10;
+}
+
+/* Clear Inner Mechanical Housing Contour (Simulates Mechanical Stem & Switch) */
+.pop-key-btn::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 10px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 30%, rgba(56, 189, 248, 0.15) 0%, rgba(0, 0, 0, 0.4) 80%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    pointer-events: none;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Hover State - Lifts Key & Amplifies Translucent Backlight Glow */
+.pop-key-btn:hover {
+    transform: translateY(-4px);
+    border-color: rgba(56, 189, 248, 0.8);
+    box-shadow:
+        0px 12px 0px #020408,
+        0px 18px 35px rgba(0, 0, 0, 0.95),
+        0px -8px 25px rgba(34, 197, 94, 0.55),
+        8px 0px 25px rgba(56, 189, 248, 0.65),
+        0px 8px 25px rgba(239, 68, 68, 0.55),
+        -8px 0px 25px rgba(168, 85, 247, 0.55),
+        inset 0px 2px 4px rgba(255, 255, 255, 0.4);
+
+    transform: translateY(-5px) scale(1.06) !important;
+    border-color: rgba(56, 189, 248, 0.9);
+}
+
+/* Tactile Click - Satisfying Mechanical Switch Push Down */
+.pop-key-btn:active {
+    transform: translateY(6px) !important;
+    box-shadow:
+        0px 2px 0px #020408,
+        0px 5px 12px rgba(0, 0, 0, 0.85),
+        0px 0px 15px rgba(56, 189, 248, 0.4),
+        inset 0px 4px 8px rgba(0, 0, 0, 0.95) !important;
+}
+
+/* Typography Inside Keycap */
+.key-dst-id {
+    font-size: 14px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    position: relative;
+    z-index: 3;
+    text-shadow: 0 0 8px rgba(56, 189, 248, 0.6);
+}
+
+.key-pop-name {
+    font-size: 11px;
+    font-weight: 600;
+    color: #cbd5e1;
+    line-height: 1.2;
+    position: relative;
+    z-index: 3;
+}
+
+/* Corner Status LED Dot */
+.key-led-dot {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    z-index: 4;
+}
+
+.led-green {
+    background-color: #22c55e;
+    box-shadow: 0 0 10px #22c55e, 0 0 16px #22c55e;
+}
+
+.led-red {
+    background-color: #ef4444;
+    box-shadow: 0 0 10px #ef4444, 0 0 16px #ef4444;
+}
+
+
+
+
+#roomContainer {
+    position: relative;
+}
+
+#roomContainer::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(56, 189, 248, 0.6) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.3;
+    animation: pcbNodesPulse 2s ease-in-out infinite alternate;
+    pointer-events: none;
+}
+
+@keyframes pcbNodesPulse {
+    0% {
+        opacity: 0.2;
+        transform: scale(0.99);
+    }
+
+    100% {
+        opacity: 0.6;
+        transform: scale(1.01);
+    }
+}
+
+
+
+/* ==========================================================================
+   5. DASHBOARD MODAL STYLES & LAYOUT
+   ========================================================================== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-content {
+    background: #0b1329;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 20px rgba(56, 189, 248, 0.1);
+    border-radius: 16px;
+    width: 100%;
+    max-width: 850px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 24px;
+    position: relative;
+    color: #f1f5f9;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.modal-header h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #94a3b8;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    outline: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.modal-close-btn:hover {
+    background: rgba(239, 68, 68, 0.2);
+    border-color: rgba(239, 68, 68, 0.4);
+    color: #ef4444;
+    transform: rotate(90deg) scale(1.05);
+}
+
+.modal-section-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 16px 0 10px;
+    color: var(--text-primary);
+}
+
+.modal-top-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.modal-location-box {
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-left: 4px solid var(--accent-blue);
+    border-radius: 12px;
+    padding: 14px 18px;
+}
+
+.modal-location-title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+}
+
+.modal-location-address {
+    font-size: 0.95rem;
+    color: #e2e8f0;
+    font-weight: 500;
+}
+
+.meter-panel {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(15, 23, 42, 0.6) 100%);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: 12px;
+    padding: 12px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.meter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.meter-title {
+    font-size: 0.8rem;
+    color: #a7f3d0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.meter-acc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.meter-balance-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6px;
+}
+
+.meter-balance-wrapper span {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #10b981;
+    text-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
+}
+
+.btn-recharge {
+    background: rgba(16, 185, 129, 0.2);
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    color: #4ade80;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-recharge:hover {
+    background: #10b981;
+    color: #0b1329;
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+}
+
+/* Power Monitor Block */
+.power-monitor-card {
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 22px;
+}
+
+.power-monitor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #e2e8f0;
+    margin-bottom: 16px;
+}
+
+.voltage-freq-badge {
+    background: rgba(56, 189, 248, 0.15);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    color: var(--accent-blue);
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.metrics-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 15px;
+}
+
+.metric-sub-card {
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 14px 18px;
+}
+
+.metric-sub-card .label {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.value-amp {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-blue);
+    text-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
+}
+
+.value-watt {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-green-bright);
+    text-shadow: 0 0 12px rgba(74, 222, 128, 0.3);
+}
+
+/* Dynamic Battery Casing UI */
+.battery-casing {
+    position: relative;
+    width: 48px;
+    height: 95px;
+    border-radius: 8px;
+    background: rgba(15, 23, 42, 0.75);
+    display: flex;
+    flex-direction: column-reverse;
+    overflow: hidden;
+    transition: border-color 0.4s ease;
+}
+
+.liquid-fill {
+    width: 100%;
+    position: relative;
+    transition: height 0.8s ease-in-out, background-color 0.5s ease;
+}
+
+.wave {
+    position: absolute;
+    top: -6px;
+    left: 0;
+    width: 200%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 40%;
+    animation: waveMotion 3s linear infinite;
+}
+
+@keyframes waveMotion {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateX(-25%) rotate(180deg);
+    }
+
+    100% {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
+
+
+
+
+
+/* ==========================================
+   MAINS FEED & INVERTER STATUS - CYBER CARD
+   ========================================== */
+
+/* কার্ডের ভেতরের লিস্ট স্টাইল মডার্ন ও ক্লিন করার জন্য */
+.spec-card .clean-list {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.spec-card .clean-list li {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    background: rgba(30, 41, 59, 0.5) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    padding: 10px 14px !important;
+    border-radius: 8px !important;
+    font-size: 13px !important;
+    color: #94a3b8 !important;
+    transition: all 0.3s ease;
+}
+
+.spec-card .clean-list li:hover {
+    border-color: rgba(56, 189, 248, 0.3) !important;
+    background: rgba(30, 41, 59, 0.8) !important;
+}
+
+.spec-card .clean-list li strong {
+    color: #f8fafc !important;
+    font-weight: 600 !important;
+}
+
+/* স্ট্যাটাস ইন্ডিকেটর ও সাইন ওয়েভ বক্সের ডিজাইন */
+.status-indicator-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sine-wave-box {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: radial-gradient(circle, #38bdf8 0%, transparent 70%);
+    border-radius: 50%;
+    box-shadow: 0 0 8px #38bdf8;
+    animation: sinePulse 1.5s infinite ease-in-out;
+}
+
+@keyframes sinePulse {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.8);
+        opacity: 0.6;
+    }
+}
+
+/* ব্যাটারি ফ্লেক্স ব্যাজ স্টাইল */
+.battery-flex-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    padding: 2px 8px;
+    border-radius: 12px;
+}
+
+.battery-mini-icon {
+    font-size: 12px;
+    color: #38bdf8;
+    animation: bounceIcon 1.2s infinite ease-in-out;
+}
+
+@keyframes bounceIcon {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2px);
+    }
+}
+
+
+
+.modal-specs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* দুটি কার্ড সমান ভাগে পাশাপাশি থাকবে */
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+/* মোবাইল বা ছোট স্ক্রিনের জন্য রেসপন্সিভ ফ্লেক্স/স্ট্যাক */
+@media (max-width: 992px) {
+    .modal-specs-grid {
+        grid-template-columns: 1fr;
+        /* স্ক্রিন ছোট হলে নিচে নিচে নেমে যাবে */
+    }
+}
+
+
+
+/* ==========================================================================
+   6. CONTROLS, TOGGLE SWITCHES & INVENTORY
+   ========================================================================== */
+.spec-card {
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+.modal-section-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: #94a3b8;
+    letter-spacing: 0.8px;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+}
+
+
+.smart-controls-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+.control-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 10px 14px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+
+.control-item:hover {
+    border-color: rgba(56, 189, 248, 0.3);
+    background: rgba(30, 41, 59, 0.8);
+}
+
+
+.control-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: #e2e8f0;
+    font-weight: 500;
+}
+
+.device-icon {
+    font-size: 16px;
+}
+
+
+
+.ac-temp-control {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.temp-picker {
+    font-size: 13px;
+    color: #38bdf8;
+    font-weight: 600;
+}
+
+
+.door-status-row {
+    background: rgba(15, 23, 42, 0.4) !important;
+    border: 1px dashed rgba(255, 255, 255, 0.1) !important;
+    justify-content: space-around !important;
+    font-size: 12px;
+}
+
+
+
+/* Switch Controls */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 38px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.15);
+    transition: .3s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .3s;
+}
+
+input:checked+.slider {
+    background-color: #0284c7;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+}
+
+input:checked+.slider:before {
+    transform: translateX(18px);
+}
+
+.slider.round {
+    border-radius: 20px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+
+
+
+/* Connected Load Dropdown Style */
+.inventory-select {
+    background: #0f172a;
+    color: #38bdf8;
+    border: 1px solid #334155;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+}
+
+
+.inventory-toggle-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(15, 23, 42, 0.8) !important;
+    /* ডার্ক ব্যাকগ্রাউন্ড */
+    border: 1px solid rgba(56, 189, 248, 0.3) !important;
+    padding: 10px 16px;
+    border-radius: 8px;
+    color: #f1f5f9 !important;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    outline: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.inventory-toggle-btn:hover,
+.inventory-toggle-btn.active {
+    background: rgba(30, 41, 59, 0.95) !important;
+    border-color: #38bdf8 !important;
+    color: #38bdf8 !important;
+}
+
+.toggle-icon {
+    font-size: 11px;
+    color: #38bdf8;
+}
+
+/* 📦 ২. ইনভেন্টরি কনটেইনার ওপেন/ক্লোজ অ্যানিমেশন (JS এর collapsed ক্লাসের সাথে মিলিয়ে) */
+.inventory-container {
+    max-height: 600px;
+    opacity: 1;
+    overflow-x: auto;
+    transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease;
+}
+
+/* JS যখন collapsed ক্লাস যোগ করবে তখন হাইড হবে */
+.inventory-container.collapsed {
+    max-height: 0;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+
+/* Modal Table Styling */
+/* 📊 ৩. ইনভেন্টরি টেবিল স্টাইলিং */
+.inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    background: rgba(15, 23, 42, 0.4);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.inventory-table th {
+    background: rgba(30, 41, 59, 0.8);
+    color: #94a3b8;
+    font-weight: 600;
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(51, 65, 85, 0.6);
+}
+
+.inventory-table td {
+    padding: 10px 12px;
+    color: #cbd5e1;
+    border-bottom: 1px solid rgba(51, 65, 85, 0.3);
+}
+
+.inventory-table tr:hover {
+    background: rgba(51, 65, 85, 0.25);
+}
+
+/* Devices Animation Icons */
+.device-icon.active-fan {
+    filter: drop-shadow(0 0 6px #00ff88);
+    animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .modal-top-grid,
+    .modal-specs-grid,
+    .metrics-grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* 1. Liquid Fill Animation for Charging */
+.battery-casing.is-charging .liquid-fill {
+    animation: liquidCharge 2s ease-in-out infinite;
+}
+
+@keyframes liquidCharge {
+    0% {
+        height: 10%;
+        opacity: 0.5;
+    }
+
+    50% {
+        height: 90%;
+        opacity: 0.9;
+    }
+
+    100% {
+        height: 100%;
+        opacity: 1;
+    }
+}
+
+/* 2. Main Line Status Glow Signal */
+.status-badge-up {
+    background-color: #10b981 !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.6);
+    font-weight: bold;
+}
+
+.status-badge-down {
+    background-color: #ef4444 !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.6);
+}
+
+/* 3. Smart Controls Interactive Toggle Switch */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 20px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #334155;
+    transition: .3s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .3s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #38bdf8;
+}
+
+input:checked+.slider:before {
+    transform: translateX(16px);
+}
+
+
+
+/* -------------------------------------------
+   ১. ব্যাটারি ওয়াটার/লিকুইড অ্যানিমেশন (Rise & Drain)
+---------------------------------------------- */
+
+/* চার্জিং অবস্থায় পানির লেভেল নিচ থেকে ওপরে উঠবে */
+.battery-casing.is-charging .liquid-fill {
+    animation: liquidRise 2.5s infinite ease-in-out !important;
+}
+
+/* ডিসচার্জিং অবস্থায় পানির লেভেল ওপর থেকে নিচে নামবে */
+.battery-casing.is-discharging .liquid-fill {
+    animation: liquidDrain 2.5s infinite ease-in-out !important;
+}
+
+@keyframes liquidRise {
+    0% {
+        height: 15%;
+        opacity: 0.6;
+    }
+
+    50% {
+        height: 85%;
+        opacity: 0.9;
+    }
+
+    100% {
+        height: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes liquidDrain {
+    0% {
+        height: 90%;
+        opacity: 0.9;
+    }
+
+    50% {
+        height: 30%;
+        opacity: 0.7;
+    }
+
+    100% {
+        height: 10%;
+        opacity: 0.5;
+    }
+}
+
+/* -------------------------------------------
+   ২. স্মার্ট কন্ট্রোল আইকন অ্যানিমেশন & কালার
+---------------------------------------------- */
+
+/* অফ অবস্থায় লাইট ও ফ্যান ধূসর (Gray) থাকবে */
+.icon-off {
+    color: #64748b !important;
+    text-shadow: none !important;
+    animation: none !important;
+}
+
+/* লাইট অন হলে হলুদ গ্লো করবে */
+.icon-light-on {
+    color: #facc15 !important;
+    filter: drop-shadow(0 0 6px #facc15);
+    transition: all 0.3s ease;
+}
+
+/* ফ্যান অন হলে চাকা ঘুরবে */
+.icon-fan-on {
+    color: #38bdf8 !important;
+    display: inline-block;
+    animation: spinFan 1.2s linear infinite !important;
+}
+
+/* এসি অন হলে ব্লু গ্লো করবে */
+.icon-ac-on {
+    color: #06b6d4 !important;
+    filter: drop-shadow(0 0 6px #06b6d4);
+}
+
+@keyframes spinFan {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Active Switch Active Icon Styling */
+.active-ac {
+    color: #38bdf8 !important;
+    text-shadow: 0 0 8px rgba(56, 189, 248, 0.8);
+}
+
+.active-fan {
+    color: #a855f7 !important;
+    animation: fanSpin 2s linear infinite;
+}
+
+.active-light {
+    color: #facc15 !important;
+    text-shadow: 0 0 10px rgba(250, 204, 21, 0.9);
+}
+
+@keyframes fanSpin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+/* Smart Glassmorphism Footer Style */
+.main-footer {
+    width: 100%;
+    margin-top: 40px;
+    padding: 14px 24px;
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.25);
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* System Live Status Dot */
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-indicator-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #10b981;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #10b981;
+    animation: pulseDot 2s infinite ease-in-out;
+}
+
+@keyframes pulseDot {
+    0% {
+        opacity: 0.5;
+        transform: scale(0.9);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 0.5;
+        transform: scale(0.9);
+    }
+}
+
+/* Author Badge Styling */
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.author-badge {
+    color: #38bdf8;
+    font-weight: 600;
+    padding: 3px 10px;
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    border-radius: 20px;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+}
+
+.author-badge:hover {
+    color: #38bdf8;
+    background: rgba(56, 189, 248, 0.2);
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+    transform: translateY(-1px);
+}
+
+
+
+
+
+
+
+
+/* ==========================================
+   ULTRA-SMART DASHBOARD REFINEMENT (CSS ONLY)
+   ========================================== */
+
+/* 1. Canvas & Grid Layout Enhancements */
+body {
+    background: radial-gradient(circle at 50% 0%, #0d1527 0%, #070a12 100%) !important;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+    color: #e2e8f0;
+}
+
+/* Smooth layout responsiveness & gap fixes */
+#roomsContainer,
+.card-grid,
+.grid-container {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)) !important;
+    gap: 20px !important;
+    padding: 10px 0 30px 0 !important;
+}
+
+/* 2. Next-Gen Glassmorphic Cards */
+.room-card,
+.card,
+div[class*="card"] {
+    background: rgba(15, 23, 42, 0.6) !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.07) !important;
+    border-radius: 14px !important;
+    padding: 16px !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Hover Effect: Modern Lift + Neon Glow Accent */
+.room-card:hover,
+.card:hover {
+    transform: translateY(-4px) !important;
+    border-color: rgba(56, 189, 248, 0.35) !important;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(56, 189, 248, 0.15) !important;
+}
+
+/* Red Outline Cards (Main Line Down / Alert) Smart Glow */
+.room-card[style*="border-color"],
+.room-card.border-danger,
+.room-card.alert-card {
+    border: 1px solid rgba(239, 68, 68, 0.4) !important;
+    box-shadow: 0 4px 20px rgba(239, 68, 68, 0.12) !important;
+}
+
+.room-card[style*="border-color"]:hover,
+.room-card.border-danger:hover {
+    border-color: rgba(239, 68, 68, 0.8) !important;
+    box-shadow: 0 8px 30px rgba(239, 68, 68, 0.25) !important;
+}
+
+/* 3. Status Badges & Pill Styling */
+.status-badge-up,
+.badge-up,
+span[class*="UP"] {
+    background: rgba(16, 185, 129, 0.12) !important;
+    color: #10b981 !important;
+    border: 1px solid rgba(16, 185, 129, 0.3) !important;
+    border-radius: 20px !important;
+    padding: 3px 10px !important;
+    font-weight: 600 !important;
+    font-size: 11px !important;
+    letter-spacing: 0.5px !important;
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.2) !important;
+}
+
+.status-badge-down,
+.badge-down,
+span[class*="DOWN"] {
+    background: rgba(239, 68, 68, 0.12) !important;
+    color: #ef4444 !important;
+    border: 1px solid rgba(239, 68, 68, 0.3) !important;
+    border-radius: 20px !important;
+    padding: 3px 10px !important;
+    font-weight: 600 !important;
+    font-size: 11px !important;
+    letter-spacing: 0.5px !important;
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.25) !important;
+}
+
+/* 4. Equipment Tags (OLT, MikroTik, Switch, Camera) */
+.device-tags,
+.tags-container,
+div:has(> .device-tag) {
+    display: flex !important;
+    gap: 6px !important;
+    flex-wrap: wrap !important;
+    margin-top: 10px !important;
+    padding-top: 10px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.device-tag,
+span[class*="tag"] {
+    background: rgba(30, 41, 59, 0.8) !important;
+    color: #94a3b8 !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    font-size: 10px !important;
+    font-weight: 500 !important;
+    padding: 2px 8px !important;
+    border-radius: 4px !important;
+    transition: all 0.2s ease !important;
+}
+
+.device-tag:hover {
+    color: #38bdf8 !important;
+    border-color: rgba(56, 189, 248, 0.4) !important;
+    background: rgba(56, 189, 248, 0.08) !important;
+}
+
+/* 5. Metrics & Text Typography */
+.card-title,
+h3,
+h4 {
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    color: #f8fafc !important;
+    letter-spacing: -0.2px !important;
+}
+
+.metric-label {
+    color: #64748b !important;
+    font-size: 11px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+.metric-value {
+    color: #e2e8f0 !important;
+    font-weight: 600 !important;
+}
+
+/* Temp & Door Alerts Highlight */
+.text-danger,
+.door-open {
+    color: #f87171 !important;
+    text-shadow: 0 0 8px rgba(248, 113, 113, 0.4) !important;
+}
+
+/* 6. Header Bar Refinement */
+.top-header,
+.header,
+header {
+    background: rgba(15, 23, 42, 0.8) !important;
+    backdrop-filter: blur(12px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding: 14px 24px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+
+
+
+
+/* ==========================================================================
+   100% RESPONSIVE ADAPTIVE LAYOUT (MOBILE, TABLET & DESKTOP)
+   ========================================================================== */
+
+/* Tablet & Medium Screens */
+@media screen and (max-width: 1024px) {
+    #roomContainer {
+        grid-template-columns: repeat(auto-fill, minmax(115px, 1fr)) !important;
+        gap: 16px;
+        padding: 18px;
+    }
+
+    .pop-key-btn {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+/* Mobile Phones (Portrait & Landscape) */
+@media screen and (max-width: 768px) {
+
+    /* ড্যাশবোর্ডের মেইন হেডার বা সার্চবার যদি পাশাপাশি থাকে তবে তা মোবাইলে নিচে নিচে নেমে আসবে */
+    header,
+    .dashboard-header,
+    .top-controls {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 10px;
+    }
+
+    /* সার্চ বক্স ও ড্রপডাউন ১০০% উইডথ করবে যেন মোবাইলে সুন্দর দেখায় */
+    input[type="text"],
+    select,
+    .search-bar {
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    /* রুম কন্টেইনার গ্রিড মোবাইল ফ্রেন্ডলি করা */
+    #roomContainer {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)) !important;
+        gap: 12px !important;
+        padding: 14px !important;
+        border-radius: 14px;
+    }
+
+    /* মোবাইল স্ক্রিনের জন্য কি-ক্যাপ সাইজ পারফেক্ট অ্যাডজাস্টমেন্ট */
+    .pop-key-btn {
+        width: 100% !important;
+        max-width: 105px;
+        height: 105px !important;
+        padding: 8px !important;
+    }
+
+    .key-dst-id {
+        font-size: 12px !important;
+    }
+
+    .key-pop-name {
+        font-size: 10px !important;
+    }
+
+    .key-led-dot {
+        top: 12px !important;
+        right: 12px !important;
+        width: 6px !important;
+        height: 6px !important;
+    }
+}
+
+/* Extra Small Devices (Smaller Android / iPhone SE) */
+/* ==========================================================================
+   Mobile & Small Screen Fix (Perfect fit for small viewports)
+   ========================================================================== */
+
+@media screen and (max-width: 576px) {
+    #roomContainer {
+        grid-template-columns: repeat(2, 1fr) !important;
+        /* Chhoto screen-e 2ti kore key thakbe */
+        gap: 12px !important;
+        padding: 14px !important;
+    }
+
+    .pop-key-btn {
+        width: 100% !important;
+        height: 95px !important;
+        /* Height ektu komiye dewa holo */
+        min-width: unset !important;
+    }
+
+    .key-dst-id {
+        font-size: 12px !important;
+    }
+
+    .key-pop-name {
+        font-size: 10px !important;
+    }
+}

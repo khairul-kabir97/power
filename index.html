@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central Power & Infrastructure Monitoring System</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="app-overlay"></div>
+
+    <div class="container">
+        <!-- Main Header -->
+        <header class="main-header">
+            <div class="header-brand">
+                <h1>Central Power Infrastructure & Telemetry SCADA</h1>
+                <p class="subtitle">: <strong id="totalRoomsCount"></strong> | Mains Grid, Inverter (UPS/IPS) &
+                    Auxiliary Load Monitor</p>
+            </div>
+
+            <div class="header-right-group">
+                <!-- System Live Sync Status -->
+                <div class="sync-status" title="Click to refresh data">
+                    <span class="sync-dot online"></span>
+                    <span class="sync-text">Live • Updated <time id="lastUpdated">Just now</time></span>
+                    <button id="btnRefresh" class="btn-icon" aria-label="Refresh Data">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M23 4v6h-6M1 20v-6h6"></path>
+                            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="global-stats">
+                    <div class="stat-box">
+                        <span class="label">MAINS UTILITY FEED STATUS</span>
+                        <span class="val online">● 38/40 Grid Active (Healthy)</span>
+                    </div>
+                    <div class="stat-box warning-box">
+                        <span class="label">GRID FAILURES / CRITICAL ALERTS</span>
+                        <span class="val warning">⚠️2 POPs Auxiliary Inverter</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main>
+            <!-- Search & Filter Controls -->
+            <section class="filter-bar" aria-label="Search and Filter Controls">
+                <div class="search-wrapper">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" id="searchInput"
+                        placeholder="Search by POP Node / Substation ID (e.g., DST-01, DST-02)..."
+                        aria-label="Search rooms">
+                </div>
+
+                <div class="select-wrapper">
+                    <select id="statusFilter" aria-label="Filter by Status">
+                        <option value="all">All Rooms</option>
+                        <option value="alert">Power Alerts / Issues Only</option>
+                        <option value="grid-off">Main Grid Down (IPS Active)</option>
+                        <option value="door-open">Door Open Alert</option>
+                        <option value="high-load">High Power Load (>80%)</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- Room Cards Grid Container -->
+            <section class="room-grid-section">
+                <div class="room-grid" id="roomContainer" aria-live="polite">
+                    <!-- Dynamic Room Cards Loaded via JS -->
+                </div>
+
+                <!-- Empty Search Result Fallback -->
+                <div id="noResults" class="no-results d-none">
+                    <!-- <p>🔍 No matching server rooms or POP locations found.</p> -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Room Modal Container -->
+    <div id="roomModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal-content">
+            <header class="modal-header">
+                <h2 id="modalTitle">Room Details</h2>
+                <button id="closeModal" class="modal-close-btn" aria-label="Close Modal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </header>
+
+            <div id="modalBody" class="modal-body">
+                <!-- Top Grid: Location & Meter Details with Quick Action -->
+                <div class="modal-top-grid">
+                    <div class="modal-location-box">
+                        <div class="modal-location-title">📍 Location Details</div>
+                        <div class="modal-location-address" id="modalAddressText"></div>
+                    </div>
+
+                    <div class="meter-panel">
+                        <div class="meter-header">
+                            <span class="meter-title">💳 UTILITY ENERGY METER BALANCE</span>
+                            <span class="meter-acc" id="modalMeterAcc">A/C: N/A</span>
+                        </div>
+                        <div class="meter-balance-wrapper">
+                            <div>
+                                <span id="modalMeterBalance">৳ 0</span>
+
+                                <!-- Dynamic Status Dot and Text -->
+                                <div class="flex items-center gap-2 mt-1" id="meter-status-container">
+                                    <span id="meter-dot"
+                                        class="w-2.5 h-2.5 rounded-full bg-yellow-400 animate-pulse"></span>
+                                    <span id="meter-status-text"
+                                        class="text-xs font-medium text-yellow-400">Loading...</span>
+                                </div>
+                            </div>
+
+                            <button id="btnMeterRecharge" class="btn-recharge" title="Quick Recharge">⚡
+                                Recharge</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Power Consumption & Live Canvas Graph -->
+                <div class="power-monitor-card">
+                    <div class="power-monitor-header">
+                        <span>⚡ Real-Time Load & Voltage Monitor</span>
+                        <div class="voltage-freq-badge" id="modalVoltageFreq">220V | 50Hz</div>
+                    </div>
+                    <div class="metrics-grid-2">
+                        <div class="metric-sub-card">
+                            <div class="label">PRIMARY PHASE CURRENT (RMS)</div>
+                            <div class="value-amp" id="modalTotalAmp">0 A</div>
+                        </div>
+                        <div class="metric-sub-card">
+                            <div class="label">ACTIVE POWER DEMAND (kW/W)</div>
+                            <div class="value-watt" id="modalTotalWatt">0 W</div>
+                        </div>
+                    </div>
+
+
+                    <!-- <div class="graph-container">
+                        <canvas id="powerGraphCanvas" width="320" height="120"></canvas>
+                    </div> -->
+
+                </div>
+
+                <!-- IPS Load Breakdown -->
+                <p class="modal-section-title">🔋 AUXILIARY INVERTER & BATTERY BANK METRICS</p>
+                <div class="ips-grid-container" id="modalIpsContainer"></div>
+
+
+
+                <!-- Smart Electrical Specs & Interactive Controls -->
+                <div class="modal-specs-grid">
+                    <!-- Power Specs Card -->
+                    <div class="spec-card">
+                        <h4 class="modal-section-title">⚡ MAINS FEED & INVERTER STATUS</h4>
+                        <ul class="clean-list">
+                            <li>
+                                AC Grid Line Status:
+                                <span class="status-indicator-wrapper">
+                                    <strong id="modalMainLine">UP</strong>
+                                    <!-- Animated AC Sine Wave Canvas/SVG Indicator -->
+                                    <span id="gridSineWave" class="sine-wave-box" title="AC Voltage Stable"></span>
+                                </span>
+                            </li>
+                            <li>Inverter Operating Mode: <strong id="modalIpsStatus">GRID ONLINE / STANDBY</strong></li>
+                            <li>
+                                State of Charge (SoC):
+                                <span class="battery-flex-badge">
+                                    <strong id="modalBatteryLevel" class="text-normal">100%</strong>
+                                    <span id="batteryWaveAnim" class="battery-mini-icon">⚡</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+
+
+                    <!-- Environment & Smart Remote Control Swtiches Card -->
+                    <div class="spec-card">
+                        <h4 class="modal-section-title">🎛️ ENVIRONMENTAL CONTROL & AUXILIARY SWITCHES</h4>
+                        <div class="smart-controls-grid">
+
+
+                            <!-- AC Smart Control -->
+                            <div class="control-item">
+                                <span class="control-label">
+                                    <span id="iconAc" class="device-icon off">❄️</span> AC Unit:
+                                </span>
+                                <div class="ac-temp-control">
+                                    <label class="switch">
+                                        <input type="checkbox" id="toggleAc">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <span class="temp-picker"><strong id="modalTemp">21</strong>°C</span>
+                                </div>
+                            </div>
+
+
+                            <!-- Fan Control -->
+                            <div class="control-item">
+                                <span class="control-label">
+                                    <span id="iconFan" class="device-icon active-fan">🌀</span> Thermal Exhaust
+                                    Ventilation:
+                                </span>
+                                <label class="switch">
+                                    <input type="checkbox" id="toggleFan" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+
+
+                            <!-- Light Control -->
+                            <div class="control-item">
+                                <span class="control-label">
+                                    <span id="iconLight" class="device-icon off">💡</span> Room Light:
+                                </span>
+                                <label class="switch">
+                                    <input type="checkbox" id="toggleLight">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+
+
+                            <!-- Door/Window Status -->
+                            <div class="control-item door-status-row">
+                                <span>🚪 Door: <strong id="modalDoor" class="text-danger">OPEN
+                                        ⚠️</strong></span>
+                                <span>🪟 Window: <strong id="modalWindow">Closed</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <!-- Collapsible Inventory Section -->
+                <div class="inventory-collapsible-wrapper">
+                    <button id="toggleInventoryBtn" class="inventory-toggle-btn" onclick="toggleInventory()">
+                        <span>🛠️ CONNECTED ACTIVE EQUIPMENT & LOAD INVENTORY</span>
+                        <span id="toggleIcon" class="toggle-icon">▼</span>
+                    </button>
+
+                    <div id="inventoryContainer" class="inventory-container collapsed">
+                        <div class="table-responsive">
+                            <table class="inventory-table">
+                                <thead>
+                                    <tr>
+                                        <th>Device Name</th>
+                                        <th>Serial Number</th>
+                                        <th>Install Date</th>
+                                        <th>Warranty</th>
+                                        <th>Power</th>
+                                        <th>Power Sources</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="modalInventoryBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Smart Glassmorphism Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <span class="status-indicator-dot"></span>
+                <span class="footer-text">&copy; 2026 <strong>SCADA Central Grid & Power Management
+                        Infrastructure</strong></span>
+            </div>
+
+            <div class="footer-right">
+                <span>System Architecture & Development by</span>
+                <span class="author-badge">Khairul Kabir</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
