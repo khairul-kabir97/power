@@ -123,7 +123,7 @@ let roomsData = [
         address: "Girza Road, Cha-16, Dhaka",
         mainLine: "UP",
         ips: "STANDBY",
-        batteryLevel: "100%",
+        batteryLevel: "50%",
         temp: "21°C",
         ac: "No",
         pdu: "Normal",
@@ -188,7 +188,7 @@ let roomsData = [
         address: "Shantinibas, Dhaka",
         mainLine: "UP",
         ips: "STANDBY",
-        batteryLevel: "100%",
+        batteryLevel: "60%",
         temp: "21°C",
         ac: "No",
         pdu: "Normal",
@@ -197,7 +197,7 @@ let roomsData = [
         door: "OPEN ⚠️",
         window: "Closed",
         ipsList: [
-            { id: "IPS-1", ratingWatts: 1600, batteryVoltage: 24, totalAh: 200, chargePercent: 100, brand: "Hamko200", installDate: "2023-01-15" },
+            { id: "IPS-1", ratingWatts: 1600, batteryVoltage: 24, totalAh: 200, chargePercent: 100, brand: "Hamko200", installDate: "2026-10-28" },
            
         ],
         powerSpecs: { systemVoltage: 220, ipsRating: "1600W", batteryCount: "1x 200Ah", oltCount: 1, mikrotikModel: "CCR1036-12G-4S", switchCount: 1 },
@@ -205,10 +205,13 @@ let roomsData = [
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
             { device: "IPS-1 (1600W2K DGLOG)", serial: "IPS-24V-4001", installDate: "15-Jan-2022", warranty: "Active", watt: 0, sources: ["Grid"] },
-            { device: "OLT DBC", serial: "OLT-DBC-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 100, maxWatt: 440, avgWatt: 100, sources: ["IPS-1", "Grid"] },
-            { device: "MikroTik CCR000000", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "Grid"] },
-            { device: "MikroTik CCR000000", serial: "MT-xxxxxxxyz", installDate: "00.00.0000", warranty: "Expired", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "Grid"] },
-            { device: "Switch SWT000000", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 170, maxWatt: 550, avgWatt: 170, sources: ["IPS-1", "Grid"] },
+            { device: "OLT DBC", serial: "OLT-DBC-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 70, maxWatt: 440, avgWatt: 70, sources: ["IPS-1", "Grid"] },
+            { device: "MikroTik CCR000000", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 60, maxWatt: 220, avgWatt: 60, sources: ["IPS-1", "Grid"] },
+            { device: "MikroTik CCR000000", serial: "MT-xxxxxxxyz", installDate: "00.00.0000", warranty: "Expired", watt: 60, maxWatt: 220, avgWatt: 60, sources: ["IPS-1", "Grid"] },
+            { device: "MikroTik ECOM", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 150, maxWatt: 550, avgWatt: 150, sources: ["IPS-1", "Grid"] },
+            { device: "Switch Cisco", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 180, maxWatt: 750, avgWatt: 180, sources: ["IPS-1", "Grid"] },
+            { device: "Switch SWT000000", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 150, maxWatt: 550, avgWatt: 150, sources: ["IPS-1", "Grid"] },
+             { device: "FAN FN000000", serial: "FN-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 40, maxWatt: 70, avgWatt: 40, sources: ["IPS-1", ""] },
         ]
     },
 
@@ -445,7 +448,7 @@ let roomsData = [
         address: "Chaudharypara, Malibag, Dhaka",
         mainLine: "UP",
         ips: "STANDBY",
-        batteryLevel: "100%",
+        batteryLevel: "30%",
         temp: "21°C",
         ac: "N/A",
         pdu: "Normal",
@@ -463,10 +466,11 @@ let roomsData = [
         inventory: [
             { device: "IPS-1 (3200W4K DGLOG)", serial: "IPS-48V-4001", installDate: "09-Jan-2025", warranty: "Active", watt: 0, sources: ["Grid"] },
             { device: "OLT Huawei", serial: "OLT-HWI-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 200, maxWatt: 1000, avgWatt: 200, sources: ["IPS-1", ""] },
-            { device: "MikroTik", serial: "DL-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 180, maxWatt: 750, avgWatt: 180, sources: ["IPS-1", "Grid"] },
-            { device: "Server DELL", serial: "DL-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 160, maxWatt: 550, avgWatt: 160, sources: ["IPS-1", "Grid"] },
-            { device: "Switch BDCOM", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 150, maxWatt: 440, avgWatt: 150, sources: ["IPS-1", "Grid"] }, 
-            { device: "Switch Cisco", serial: "CS-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 150, maxWatt: 500, avgWatt: 150, sources: ["IPS-1", "Grid"] },
+            { device: "MikroTik", serial: "DL-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 200, maxWatt: 750, avgWatt: 200, sources: ["IPS-1", "Grid"] },
+            { device: "MikroTik", serial: "DL-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 200, maxWatt: 750, avgWatt: 200, sources: ["IPS-1", "Grid"] },
+            { device: "Server DELL", serial: "DL-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 190, maxWatt: 550, avgWatt: 190, sources: ["IPS-1", "Grid"] },
+            { device: "Switch BDCOM", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 180, maxWatt: 440, avgWatt: 180, sources: ["IPS-1", "Grid"] }, 
+            { device: "Switch Cisco", serial: "CS-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 170, maxWatt: 500, avgWatt: 170, sources: ["IPS-1", "Grid"] },
         ]
     },
 
@@ -1409,7 +1413,7 @@ function openRoomDetails(room) {
             if (src.startsWith("IPS")) srcClass = "src-ips";
             else if (src === "ATS") srcClass = "src-ats";
 
-            return `<span class="src-badge ${srcClass}">${src === 'Grid' ? '⚡ Grid' : '🔋 ' + src}</span>`;
+            return `<span class="src-badge ${srcClass}">${src === 'Grid' ? '⚡Grid' : '🔋 ' + src}</span>`;
         }).join(' ');
 
         return `
@@ -1558,7 +1562,7 @@ if (room.Generator || room.generator) {
 
                     <!-- Battery Status -->
                     <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); padding: 8px; border-radius: 8px; display: flex; flex-direction: column; justify-content: center;">
-                        <span style="font-size: 0.72rem; color: #94a3b8;">⚡ Starter Battery</span>
+                        <span style="font-size: 0.72rem; color: #94a3b8;">% Starter Battery</span>
                         <div style="display: flex; align-items: center; gap: 6px; margin-top: 2px;">
                             <span style="color: #4ade80; font-size: 0.85rem; font-weight: 700;">${genBattery}</span>
                             <span style="font-size: 0.6rem; color: #4ade80; background: rgba(74, 222, 128, 0.15); padding: 1px 4px; border-radius: 4px;">HEALTHY</span>
@@ -1799,7 +1803,7 @@ function renderIpsBatteries(roomData, isGridDownExplicit, ipsLoads = {}, totalMa
 
 
 // ২. স্টেট ব্যাজ টেক্সট ও কালার সেটআপ  
-  const statusBadgeText = isGridOn ? '⚡ Charging...' : '🔋 Inverter Active (Discharging)';
+  const statusBadgeText = isGridOn ? '⚡Charging...' : '🔋 Inverter Active (Discharging)';
   const statusBadgeColor = isGridOn ? '#34d399' : '#f59e0b';
 
   // ২. ipsList না থাকলে
@@ -1905,7 +1909,7 @@ function renderIpsBatteries(roomData, isGridDownExplicit, ipsLoads = {}, totalMa
             <div style="position: absolute; top: -5px; left: 50%; transform: translateX(-50%); width: 14px; height: 3px; background: ${themeColor}; border-radius: 2px 2px 0 0;"></div>
             <div id="liquidFill" class="liquid-fill" style="height: ${batteryPercent}%; width: 100%; background: ${themeColor}; transition: height 0.8s ease-in-out;"></div>
             <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 13px; z-index: 3;">
-                ${isGridOn ? '⚡' : ''}
+                ${isGridOn ? '100%' : ''}
             </div>
         </div>
 
