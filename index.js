@@ -12,7 +12,7 @@ let roomsData = [
         mainLine: "UP",
         Generator: "Standby",
         ips: "STANDBY",
-        batteryLevel: "100%",
+        batteryLevel: "265%",
         temp: "22°C",
         ac: "Running",
         pdu: "Normal",
@@ -21,10 +21,10 @@ let roomsData = [
         door: "Closed",
         window: "Closed",
         ipsList: [
-            { id: "IPS-1", ratingWatts: 2400, batteryVoltage: 96, totalAh: 100, chargePercent: 100, brand: "Hamko100", installDate: "2026-08-31" },
-            { id: "IPS-2", ratingWatts: 2400, batteryVoltage: 96, totalAh: 45, chargePercent: 100, brand: "Solid45", installDate: "2021-11-11" },
-            { id: "IPS-3", ratingWatts: 2400, batteryVoltage: 96, totalAh: 100, chargePercent: 100, brand: "Hamko100", installDate: "2020-01-15" },
-            { id: "IPS-4", ratingWatts: 6400, batteryVoltage: 96, totalAh: 100, chargePercent: 100, brand: "Hamko100", installDate: "2026-06-30" }
+            { id: "IPS-1", ratingWatts: 2400, batteryVoltage: 96, totalAh: 100, chargePercent: 90, brand: "Hamko100", installDate: "2026-08-31" },
+            { id: "IPS-2", ratingWatts: 2400, batteryVoltage: 96, totalAh: 45, chargePercent: 30, brand: "Solid45", installDate: "2021-11-11" },
+            { id: "IPS-3", ratingWatts: 2400, batteryVoltage: 96, totalAh: 100, chargePercent: 60, brand: "Hamko100", installDate: "2020-01-15" },
+            { id: "IPS-4", ratingWatts: 6400, batteryVoltage: 96, totalAh: 100, chargePercent: 85, brand: "Hamko100", installDate: "2026-06-30" }
         ],
         powerSpecs: { systemVoltage: 220, ipsRating: "136000W", batteryCount: "1x 100Ah", oltCount: 4, mikrotikModel: "CCR1036-12G-4S", switchCount: 3 },
         meterInfo: { accountNo: "998231412", balanceBDT: 3420.00, lastRechargeDate: "2026-07-15", type: "Prepaid" },
@@ -68,7 +68,7 @@ let roomsData = [
         mainLine: "UP",
         Generator: "Standby",
         ips: "STANDBY",
-        batteryLevel: "100%",
+        batteryLevel: "129%",
         temp: "22°C",
         ac: "Running",
         pdu: "Normal",
@@ -77,9 +77,9 @@ let roomsData = [
         door: "Closed",
         window: "Closed",
         ipsList: [
-            { id: "IPS-1", ratingWatts: 12000, batteryVoltage: 192, totalAh: 80, chargePercent: 100, brand: "Hamko80", installDate: "2023-01-01" },
-            { id: "IPS-2", ratingWatts: 3200, batteryVoltage: 48, totalAh: 200, chargePercent: 100, brand: "Hamko200", installDate: "2026-10-20" },
-            { id: "IPS-3", ratingWatts: 1600, batteryVoltage: 24, totalAh: 200, chargePercent: 100, brand: "Hamko200", installDate: "2020-01-15" },
+            { id: "IPS-1", ratingWatts: 12000, batteryVoltage: 192, totalAh: 80, chargePercent: 39, brand: "Hamko80", installDate: "2023-01-01" },
+            { id: "IPS-2", ratingWatts: 3200, batteryVoltage: 48, totalAh: 200, chargePercent: 50, brand: "Hamko200", installDate: "2023-10-20" },
+            { id: "IPS-3", ratingWatts: 1600, batteryVoltage: 24, totalAh: 200, chargePercent: 40, brand: "Hamko200", installDate: "2020-01-15" },
         ],
         powerSpecs: { systemVoltage: 220, ipsRating: "15200W", batteryCount: "8x 100Ah", oltCount: 4, mikrotikModel: "CCR1036-12G-4S", switchCount: 3 },
         meterInfo: { accountNo: "998231412", balanceBDT: 3420.00, lastRechargeDate: "2026-07-15", type: "Prepaid" },
@@ -123,7 +123,7 @@ let roomsData = [
         address: "Girza Road, Cha-16, Dhaka",
         mainLine: "UP",
         ips: "STANDBY",
-        batteryLevel: "50%",
+        batteryLevel: "80%",
         temp: "21°C",
         ac: "No",
         pdu: "Normal",
@@ -132,7 +132,7 @@ let roomsData = [
         door: "OPEN ⚠️",
         window: "Closed",
         ipsList: [
-            { id: "IPS-1", ratingWatts: 2400, batteryVoltage: 24, totalAh: 200, chargePercent: 100, brand: "Hamko200", installDate: "2025-01-09" },
+            { id: "IPS-1", ratingWatts: 2400, batteryVoltage: 24, totalAh: 200, chargePercent: 80, brand: "Hamko200", installDate: "2025-01-09" },
            
         ],
         powerSpecs: { systemVoltage: 220, ipsRating: "2400W", batteryCount: "2x 200Ah", oltCount: 1, mikrotikModel: "CCR1036-12G-4S", switchCount: 1 },
@@ -155,7 +155,7 @@ let roomsData = [
         address: "Friends Garden, Dhaka",
         mainLine: "UP",
         ips: "STANDBY",
-        batteryLevel: "100%",
+        batteryLevel: "80%",
         temp: "21°C",
         ac: "Running",
         pdu: "Normal",
@@ -164,7 +164,7 @@ let roomsData = [
         door: "Closed ⚠️",
         window: "Closed",
         ipsList: [
-            { id: "IPS-1", ratingWatts: 2400, batteryVoltage: 24, totalAh: 200, chargePercent: 100, brand: "Hamko200", installDate: "2025-07-01" },
+            { id: "IPS-1", ratingWatts: 2400, batteryVoltage: 24, totalAh: 200, chargePercent: 80, brand: "Hamko200", installDate: "2025-07-01" },
            
         ],
         powerSpecs: { systemVoltage: 220, ipsRating: "2400W", batteryCount: "1x 200Ah", oltCount: 1, mikrotikModel: "CCR1036-12G-4S", switchCount: 1 },
@@ -188,7 +188,7 @@ let roomsData = [
         address: "Shantinibas, Dhaka",
         mainLine: "UP",
         ips: "STANDBY",
-        batteryLevel: "60%",
+        batteryLevel: "100%",
         temp: "21°C",
         ac: "No",
         pdu: "Normal",
@@ -255,7 +255,7 @@ let roomsData = [
         address: "House-01, Road-4, BLOCK-G, Bashundhara, Dhaka",
         mainLine: "UP",
         ips: "STANDBY",
-        batteryLevel: "100%",
+        batteryLevel: "85%",
         temp: "21°C",
         ac: "Not working",
         pdu: "Normal",
@@ -264,7 +264,7 @@ let roomsData = [
         door: "OPEN ⚠️",
         window: "Closed",
         ipsList: [
-            { id: "IPS-1", ratingWatts: 2400, batteryVoltage: 24, totalAh: 200, chargePercent: 100, brand: "Hamko200", installDate: "2025-06-18" },
+            { id: "IPS-1", ratingWatts: 2400, batteryVoltage: 24, totalAh: 200, chargePercent: 85, brand: "Hamko200", installDate: "2025-06-18" },
            
         ],
         powerSpecs: { systemVoltage: 220, ipsRating: "2400W", batteryCount: "1x 200Ah", oltCount: 1, mikrotikModel: "CCR1036-12G-4S", switchCount: 1 },
@@ -287,7 +287,7 @@ let roomsData = [
         address: "House-01, Road-4, BLOCK-I, Bashundhara, Dhaka",
         mainLine: "UP",
         ips: "STANDBY",
-        batteryLevel: "100%",
+        batteryLevel: "60%",
         temp: "21°C",
         ac: "N/A",
         pdu: "Normal",
@@ -296,7 +296,7 @@ let roomsData = [
         door: "OPEN ⚠️",
         window: "Closed",
         ipsList: [
-            { id: "IPS-1", ratingWatts: 2400, batteryVoltage: 24, totalAh: 100, chargePercent: 100, brand: "Hamko100", installDate: "2023-09-15" },
+            { id: "IPS-1", ratingWatts: 2400, batteryVoltage: 24, totalAh: 100, chargePercent: 60, brand: "Hamko100", installDate: "2023-09-15" },
            
         ],
         powerSpecs: { systemVoltage: 220, ipsRating: "2400W", batteryCount: "1x 100Ah", oltCount: 1, mikrotikModel: "CCR1036-12G-4S", switchCount: 1 },
@@ -306,7 +306,7 @@ let roomsData = [
             { device: "IPS-1 (1600W2K DGLOG)", serial: "IPS-24V-4001", installDate: "15-Jan-2022", warranty: "Active", watt: 0, sources: ["Grid"] },
             { device: "OLT DBC", serial: "OLT-DBC-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 100, maxWatt: 440, avgWatt: 100, sources: ["IPS-1", "Grid"] },
             { device: "MikroTik CCR000000", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "Grid"] },
-            { device: "Switch SWT000000", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 160, maxWatt: 550, avgWatt: 160, sources: ["IPS-1", "Grid"] },
+    
         ]
     },
 
@@ -318,7 +318,7 @@ let roomsData = [
         address: "DIU Road, Satarkul, Dhaka",
         mainLine: "UP",
         ips: "STANDBY",
-        batteryLevel: "100%",
+        batteryLevel: "90%",
         temp: "21°C",
         ac: "No",
         pdu: "Normal",
@@ -327,7 +327,7 @@ let roomsData = [
         door: "OPEN ⚠️",
         window: "Closed",
         ipsList: [
-            { id: "IPS-1", ratingWatts: 2400, batteryVoltage: 24, totalAh: 200, chargePercent: 100, brand: "Hamko200", installDate: "2026-01-01" },
+            { id: "IPS-1", ratingWatts: 2400, batteryVoltage: 24, totalAh: 200, chargePercent: 90, brand: "Hamko200", installDate: "2026-01-01" },
            
         ],
         powerSpecs: { systemVoltage: 220, ipsRating: "2400W", batteryCount: "1x 200Ah", oltCount: 1, mikrotikModel: "CCR1036-12G-4S", switchCount: 1 },
@@ -350,7 +350,7 @@ let roomsData = [
         address: "Middle Kunipara, Tejgaon, Dhaka",
         mainLine: "UP",
         ips: "STANDBY",
-        batteryLevel: "100%",
+        batteryLevel: "90%",
         temp: "21°C",
         ac: "Running",
         pdu: "Normal",
@@ -359,7 +359,7 @@ let roomsData = [
         door: "Closed",
         window: "Closed",
         ipsList: [
-            { id: "IPS-1", ratingWatts: 2400, batteryVoltage: 24, totalAh: 200, chargePercent: 100, brand: "Hamko200", installDate: "2025-01-15" },
+            { id: "IPS-1", ratingWatts: 2400, batteryVoltage: 24, totalAh: 200, chargePercent: 90, brand: "Hamko200", installDate: "2025-01-15" },
            
         ],
         powerSpecs: { systemVoltage: 220, ipsRating: "2400W", batteryCount: "1x 200Ah", oltCount: 1, mikrotikModel: "CCR1036-12G-4S", switchCount: 1 },
@@ -383,7 +383,7 @@ let roomsData = [
         address: "Akotanibash, Road, BLOCK-B, ShyedNagor, Dhaka",
         mainLine: "UP",
         ips: "STANDBY",
-        batteryLevel: "100%",
+        batteryLevel: "90%",
         temp: "21°C",
         ac: "N/A",
         pdu: "Normal",
@@ -392,7 +392,7 @@ let roomsData = [
         door: "OPEN ⚠️",
         window: "Closed",
         ipsList: [
-            { id: "IPS-1", ratingWatts: 2400, batteryVoltage: 24, totalAh: 200, chargePercent: 100, brand: "Hamko200", installDate: "2025-06-25" },
+            { id: "IPS-1", ratingWatts: 2400, batteryVoltage: 24, totalAh: 200, chargePercent: 90, brand: "Hamko200", installDate: "2025-06-25" },
            
         ],
         powerSpecs: { systemVoltage: 220, ipsRating: "2400W", batteryCount: "1x 200Ah", oltCount: 1, mikrotikModel: "CCR1036-12G-4S", switchCount: 1 },
@@ -415,7 +415,7 @@ let roomsData = [
         address: "GM Bari, Satarkul Road, Uttar Badda, Dhaka",
         mainLine: "UP",
         ips: "STANDBY",
-        batteryLevel: "100%",
+        batteryLevel: "70%",
         temp: "21°C",
         ac: "N/A",
         pdu: "Normal",
@@ -424,7 +424,7 @@ let roomsData = [
         door: "OPEN ⚠️",
         window: "Closed",
         ipsList: [
-            { id: "IPS-1", ratingWatts: 2400, batteryVoltage: 24, totalAh: 200, chargePercent: 100, brand: "Lucas200", installDate: "2023-05-01" },
+            { id: "IPS-1", ratingWatts: 2400, batteryVoltage: 24, totalAh: 200, chargePercent: 70, brand: "Lucas200", installDate: "2023-05-01" },
            
         ],
         powerSpecs: { systemVoltage: 220, ipsRating: "2400W", batteryCount: "1x 200Ah", oltCount: 1, mikrotikModel: "CCR1036-12G-4S", switchCount: 1 },
@@ -443,12 +443,12 @@ let roomsData = [
     {
         id: 21,
         name: "Dst-21 Reing ICT",
-        floor: "G Floor",
+        floor: "2nd Floor",
         addressType: "POP",
-        address: "Chaudharypara, Malibag, Dhaka",
+        address: "Mirbag, Natun Rasta, Rampura, Dhaka",
         mainLine: "UP",
         ips: "STANDBY",
-        batteryLevel: "30%",
+        batteryLevel: "45%",
         temp: "21°C",
         ac: "N/A",
         pdu: "Normal",
@@ -457,7 +457,7 @@ let roomsData = [
         door: "OPEN ⚠️",
         window: "Closed",
         ipsList: [
-            { id: "IPS-1", ratingWatts: 3200, batteryVoltage: 48, totalAh: 200, chargePercent: 100, brand: "Hamko200", installDate: "2023-05-01" },
+            { id: "IPS-1", ratingWatts: 3200, batteryVoltage: 48, totalAh: 200, chargePercent: 45, brand: "Hamko200", installDate: "2023-05-01" },
            
         ],
         powerSpecs: { systemVoltage: 220, ipsRating: "3200W", batteryCount: "1x 200Ah", oltCount: 1, mikrotikModel: "CCR1036-12G-4S", switchCount: 1 },
@@ -483,7 +483,7 @@ let roomsData = [
         address: "Block-B, Road-01, Banasree, Dhaka",
         mainLine: "UP",
         ips: "STANDBY",
-        batteryLevel: "100%",
+        batteryLevel: "90%",
         temp: "21°C",
         ac: "N/A",
         pdu: "Normal",
@@ -492,7 +492,7 @@ let roomsData = [
         door: "OPEN ⚠️",
         window: "Closed",
         ipsList: [
-            { id: "IPS-1", ratingWatts: 2400, batteryVoltage: 24, totalAh: 200, chargePercent: 100, brand: "Hamko200", installDate: "2026-04-15" },
+            { id: "IPS-1", ratingWatts: 2400, batteryVoltage: 24, totalAh: 200, chargePercent: 90, brand: "Hamko200", installDate: "2026-04-15" },
            
         ],
         powerSpecs: { systemVoltage: 220, ipsRating: "2400W", batteryCount: "1x 200Ah", oltCount: 1, mikrotikModel: "CCR1036-12G-4S", switchCount: 1 },
@@ -518,7 +518,7 @@ let roomsData = [
         address: "Block-C, Road-02, Aftabnagar, Dhaka",
         mainLine: "UP",
         ips: "STANDBY",
-        batteryLevel: "100%",
+        batteryLevel: "70%",
         temp: "21°C",
         ac: "N/A",
         pdu: "Normal",
@@ -527,11 +527,11 @@ let roomsData = [
         door: "OPEN ⚠️",
         window: "Closed",
         ipsList: [
-            { id: "IPS-1", ratingWatts: 2400, batteryVoltage: 96, totalAh: 100, chargePercent: 100, brand: "Hamko100", installDate: "2022-06-01" },
+            { id: "IPS-1", ratingWatts: 2400, batteryVoltage: 96, totalAh: 160, chargePercent: 70, brand: "Hamko160", installDate: "2022-06-01" },
         
            
         ],
-        powerSpecs: { systemVoltage: 220, ipsRating: "2400W", batteryCount: "1x 100Ah", oltCount: 1, mikrotikModel: "CCR1036-12G-4S", switchCount: 1 },
+        powerSpecs: { systemVoltage: 220, ipsRating: "2400W", batteryCount: "1x 160Ah", oltCount: 1, mikrotikModel: "CCR1036-12G-4S", switchCount: 1 },
         meterInfo: { accountNo: "998231412", balanceBDT: 340.00, lastRechargeDate: "2026-08-15", type: "Prepaid" },
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
@@ -552,7 +552,7 @@ let roomsData = [
         address: "Block-C, Road-02, Merul-Badda, Dhaka",
         mainLine: "UP",
         ips: "STANDBY",
-        batteryLevel: "100%",
+        batteryLevel: "70%",
         temp: "21°C",
         ac: "N/A",
         pdu: "Normal",
@@ -561,7 +561,7 @@ let roomsData = [
         door: "OPEN ⚠️",
         window: "Closed",
         ipsList: [
-            { id: "IPS-1", ratingWatts: 800, batteryVoltage: 12, totalAh: 200, chargePercent: 100, brand: "Hamko200", installDate: "2021-01-01" },
+            { id: "IPS-1", ratingWatts: 800, batteryVoltage: 12, totalAh: 200, chargePercent: 70, brand: "Hamko200", installDate: "2021-01-01" },
         
            
         ],
@@ -570,10 +570,10 @@ let roomsData = [
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
             { device: "IPS-1 (800W1K No-Brand)", serial: "IPS-12V-2001", installDate: "09-Jan-2025", warranty: "Active", watt: 0, sources: ["Grid"] },
-            { device: "OLT VSOL", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 60, maxWatt: 220, avgWatt: 60, sources: ["IPS-1", "Grid"] },
-            { device: "OLT VSOL", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 60, maxWatt: 220, avgWatt: 60, sources: ["IPS-1", "Grid"] },
+            { device: "OLT VSOL", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 50, maxWatt: 220, avgWatt: 50, sources: ["IPS-1", "Grid"] },
+            { device: "OLT VSOL", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 50, maxWatt: 220, avgWatt: 50, sources: ["IPS-1", "Grid"] },
             { device: "MikroTik ECOM", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 60, maxWatt: 250, avgWatt: 60, sources: ["IPS-1", "Grid"] }, 
-            { device: "Switch Cisco", serial: "CS-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 150, maxWatt: 500, avgWatt: 150, sources: ["IPS-1", "Grid"] },
+            { device: "Switch Cisco", serial: "CS-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 120, maxWatt: 500, avgWatt: 120, sources: ["IPS-1", "Grid"] },
         ]
     },
 
@@ -586,7 +586,7 @@ let roomsData = [
         address: "Block-C, Road-02, Nakalpara, Dhaka",
         mainLine: "UP",
         ips: "STANDBY",
-        batteryLevel: "100%",
+        batteryLevel: "60%",
         temp: "21°C",
         ac: "N/A",
         pdu: "Normal",
@@ -595,7 +595,7 @@ let roomsData = [
         door: "OPEN ⚠️",
         window: "Closed",
         ipsList: [
-            { id: "IPS-1", ratingWatts: 1600, batteryVoltage: 24, totalAh: 200, chargePercent: 100, brand: "Hamko200", installDate: "2022-01-01" },
+            { id: "IPS-1", ratingWatts: 1600, batteryVoltage: 24, totalAh: 200, chargePercent: 60, brand: "Hamko200", installDate: "2022-01-01" },
         
            
         ],
@@ -620,7 +620,7 @@ let roomsData = [
         address: "Khalpar,Kadamtuli Bridge, Sabuzbagh, Basabo, Dhaka",
         mainLine: "UP",
         ips: "STANDBY",
-        batteryLevel: "100%",
+        batteryLevel: "70%",
         temp: "21°C",
         ac: "N/A",
         pdu: "Normal",
@@ -629,7 +629,7 @@ let roomsData = [
         door: "OPEN ⚠️",
         window: "Closed",
         ipsList: [
-            { id: "IPS-1", ratingWatts: 2400, batteryVoltage: 24, totalAh: 200, chargePercent: 100, brand: "Hamko200", installDate: "2024-01-01" },
+            { id: "IPS-1", ratingWatts: 2400, batteryVoltage: 24, totalAh: 200, chargePercent: 70, brand: "Hamko200", installDate: "2024-01-01" },
         
            
         ],
@@ -656,7 +656,7 @@ let roomsData = [
         address: "Baitakhali, Anandanagar Road, Badda, Dhaka",
         mainLine: "UP",
         ips: "STANDBY",
-        batteryLevel: "100%",
+        batteryLevel: "85%",
         temp: "21°C",
         ac: "N/A",
         pdu: "Normal",
@@ -665,7 +665,7 @@ let roomsData = [
         door: "OPEN ⚠️",
         window: "Closed",
         ipsList: [
-            { id: "IPS-1", ratingWatts: 800, batteryVoltage: 12, totalAh: 200, chargePercent: 100, brand: "Hamko200", installDate: "2025-06-01" },
+            { id: "IPS-1", ratingWatts: 800, batteryVoltage: 12, totalAh: 200, chargePercent: 85, brand: "Hamko200", installDate: "2025-06-01" },
         
            
         ],
@@ -688,7 +688,7 @@ let roomsData = [
         address: "Hosen Market, Badda, Dhaka",
         mainLine: "UP",
         ips: "STANDBY",
-        batteryLevel: "100%",
+        batteryLevel: "160%",
         temp: "21°C",
         ac: "N/A",
         pdu: "Normal",
@@ -697,8 +697,8 @@ let roomsData = [
         door: "OPEN ⚠️",
         window: "Closed",
         ipsList: [
-            { id: "IPS-1", ratingWatts: 2400, batteryVoltage: 24, totalAh: 200, chargePercent: 100, brand: "Hamko200", installDate: "2024-06-01" },
-            { id: "IPS-2", ratingWatts: 1600, batteryVoltage: 24, totalAh: 200, chargePercent: 100, brand: "Hamko200", installDate: "2024-09-01" }
+            { id: "IPS-1", ratingWatts: 2400, batteryVoltage: 24, totalAh: 200, chargePercent: 80, brand: "Hamko200", installDate: "2024-06-01" },
+            { id: "IPS-2", ratingWatts: 1600, batteryVoltage: 24, totalAh: 200, chargePercent: 80, brand: "Hamko200", installDate: "2024-09-01" }
         
            
         ],
@@ -726,7 +726,7 @@ let roomsData = [
         address: "Shyamoli, Dhaka",
         mainLine: "UP",
         ips: "STANDBY",
-        batteryLevel: "100%",
+        batteryLevel: "80%",
         temp: "21°C",
         ac: "N/A",
         pdu: "Normal",
@@ -735,7 +735,7 @@ let roomsData = [
         door: "OPEN ⚠️",
         window: "Closed",
         ipsList: [
-            { id: "IPS-1", ratingWatts: 2400, batteryVoltage: 24, totalAh: 200, chargePercent: 100, brand: "Hamko200", installDate: "2025-01-01" },
+            { id: "IPS-1", ratingWatts: 2400, batteryVoltage: 24, totalAh: 200, chargePercent: 80, brand: "Hamko200", installDate: "2025-01-01" },
         
            
         ],
@@ -760,7 +760,7 @@ let roomsData = [
         mainLine: "UP",
         Generator: "Standby",
         ips: "STANDBY",
-        batteryLevel: "100%",
+        batteryLevel: "170%",
         temp: "21°C",
         ac: "N/A",
         pdu: "Normal",
@@ -769,8 +769,8 @@ let roomsData = [
         door: "OPEN ⚠️",
         window: "Closed",
         ipsList: [
-            { id: "IPS-1", ratingWatts: 2400, batteryVoltage: 24, totalAh: 200, chargePercent: 100, brand: "Hamko200", installDate: "2026-06-01" },
-            { id: "IPS-2", ratingWatts: 2400, batteryVoltage: 24, totalAh: 200, chargePercent: 100, brand: "Hamko200", installDate: "2026-04-01" }
+            { id: "IPS-1", ratingWatts: 2400, batteryVoltage: 24, totalAh: 200, chargePercent: 90, brand: "Hamko200", installDate: "2026-06-01" },
+            { id: "IPS-2", ratingWatts: 2400, batteryVoltage: 24, totalAh: 200, chargePercent: 80, brand: "Hamko200", installDate: "2026-04-01" }
         
            
         ],
@@ -800,7 +800,7 @@ let roomsData = [
         address: "Chhayyabithi, Jaydeppur, Gazipur",
         mainLine: "UP",
         ips: "STANDBY",
-        batteryLevel: "100%",
+        batteryLevel: "75%",
         temp: "21°C",
         ac: "N/A",
         pdu: "Normal",
@@ -809,7 +809,7 @@ let roomsData = [
         door: "OPEN ⚠️",
         window: "Closed",
         ipsList: [
-            { id: "IPS-1", ratingWatts: 800, batteryVoltage: 12, totalAh: 200, chargePercent: 100, brand: "Hamko200", installDate: "2024-01-01" },
+            { id: "IPS-1", ratingWatts: 800, batteryVoltage: 12, totalAh: 200, chargePercent: 75, brand: "Hamko200", installDate: "2024-01-01" },
         
            
         ],
@@ -818,15 +818,15 @@ let roomsData = [
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
             { device: "IPS-1 (800W1K Luminous)", serial: "IPS-12V-2001", installDate: "09-Jan-2025", warranty: "Active", watt: 0, sources: ["Grid"] },
-            { device: "MikroTik CCR", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "Grid"] }, 
-            { device: "MikroTik CCR", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "Grid"] }, 
-            { device: "MikroTik CCR", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "Grid"] },
-            { device: "OLT BDCOM", serial: "OLT-BDCOM-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 80, maxWatt: 250, avgWatt: 80, sources: ["IPS-1", "Grid"] },
-            { device: "OLT BDCOM", serial: "OLT-BDCOM-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 80, maxWatt: 250, avgWatt: 80, sources: ["IPS-1", "Grid"] },
-            { device: "OLT VSON", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 80, maxWatt: 250, avgWatt: 80, sources: ["IPS-1", "Grid"] },
-            { device: "OLT CDATA", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 100, maxWatt: 300, avgWatt: 100, sources: ["IPS-1", "Grid"] },
-            { device: "Switch VSOL", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "Grid"] },
-            { device: "Switch BDCOM", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "Grid"] },
+            { device: "MikroTik CCR", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 50, maxWatt: 220, avgWatt: 50, sources: ["IPS-1", "Grid"] }, 
+            { device: "MikroTik CCR", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 50, maxWatt: 220, avgWatt: 50, sources: ["IPS-1", "Grid"] }, 
+            { device: "MikroTik CCR", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 50, maxWatt: 220, avgWatt: 50, sources: ["IPS-1", "Grid"] },
+            { device: "OLT BDCOM", serial: "OLT-BDCOM-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 60, maxWatt: 250, avgWatt: 60, sources: ["IPS-1", "Grid"] },
+            { device: "OLT BDCOM", serial: "OLT-BDCOM-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 60, maxWatt: 250, avgWatt: 60, sources: ["IPS-1", "Grid"] },
+            { device: "OLT VSON", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 60, maxWatt: 250, avgWatt: 60, sources: ["IPS-1", "Grid"] },
+            { device: "OLT CDATA", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 80, maxWatt: 300, avgWatt: 80, sources: ["IPS-1", "Grid"] },
+            { device: "Switch VSOL", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 50, maxWatt: 220, avgWatt: 50, sources: ["IPS-1", "Grid"] },
+            { device: "Switch BDCOM", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 50, maxWatt: 220, avgWatt: 50, sources: ["IPS-1", "Grid"] },
         ]
     },
 
@@ -838,7 +838,7 @@ let roomsData = [
         address: "Shakh Shahebbazar,lalbagh, Dhaka",
         mainLine: "UP",
         ips: "STANDBY",
-        batteryLevel: "60%",
+        batteryLevel: "50%",
         temp: "21°C",
         ac: "N/A",
         pdu: "Normal",
@@ -847,7 +847,7 @@ let roomsData = [
         door: "OPEN ⚠️",
         window: "Closed",
         ipsList: [
-            { id: "IPS-1", ratingWatts: 800, batteryVoltage: 12, totalAh: 200, chargePercent: 100, brand: "Hamko200", installDate: "2022-01-01" },
+            { id: "IPS-1", ratingWatts: 800, batteryVoltage: 12, totalAh: 200, chargePercent: 50, brand: "Hamko200", installDate: "2022-01-01" },
         
            
         ],
@@ -856,9 +856,9 @@ let roomsData = [
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
             { device: "IPS-1 (800W1K Luminous)", serial: "IPS-12V-2001", installDate: "09-Jan-2025", warranty: "Active", watt: 0, sources: ["Grid"] },
-            { device: "OLT VSOL", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 100, maxWatt: 440, avgWatt: 100, sources: ["IPS-1", "Grid"] },
-            { device: "MikroTik CCR", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 60, maxWatt: 250, avgWatt: 60, sources: ["IPS-1", "Grid"] }, 
-            { device: "Switch BDCOM", serial: "CS-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 80, maxWatt: 350, avgWatt: 80, sources: ["IPS-1", "Grid"] },
+            { device: "OLT VSOL", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 90, maxWatt: 440, avgWatt: 90, sources: ["IPS-1", "Grid"] },
+            { device: "MikroTik CCR", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 50, maxWatt: 250, avgWatt: 50, sources: ["IPS-1", "Grid"] }, 
+            { device: "Switch BDCOM", serial: "CS-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 70, maxWatt: 350, avgWatt: 70, sources: ["IPS-1", "Grid"] },
         ]
     },
 
@@ -872,7 +872,7 @@ let roomsData = [
         address: "Manshi Market Road, Dakkhinkhan, Uttara, Dhaka",
         mainLine: "UP",
         ips: "STANDBY",
-        batteryLevel: "100%",
+        batteryLevel: "145%",
         temp: "21°C",
         ac: "N/A",
         pdu: "Normal",
@@ -881,8 +881,8 @@ let roomsData = [
         door: "OPEN ⚠️",
         window: "Closed",
         ipsList: [
-            { id: "IPS-1", ratingWatts: 2400, batteryVoltage: 96, totalAh: 200, chargePercent: 100, brand: "Hamko200", installDate: "2020-01-01" },
-            { id: "IPS-2", ratingWatts: 2400, batteryVoltage: 24, totalAh: 200, chargePercent: 100, brand: "Hamko200", installDate: "2026-05-01" },
+            { id: "IPS-1", ratingWatts: 2400, batteryVoltage: 96, totalAh: 200, chargePercent: 50, brand: "Hamko200", installDate: "2020-01-01" },
+            { id: "IPS-2", ratingWatts: 2400, batteryVoltage: 24, totalAh: 200, chargePercent: 95, brand: "Hamko200", installDate: "2026-05-01" },
            
         ],
         powerSpecs: { systemVoltage: 220, ipsRating: "2400W", batteryCount: "2x 200Ah", oltCount: 1, mikrotikModel: "CCR1036-12G-4S", switchCount: 1 },
@@ -944,7 +944,7 @@ let roomsData = [
         address: "High School Road, Kalachandpur, Narda, Dhaka",
         mainLine: "DOWN",
         ips: "ACTIVE",
-        batteryLevel: "50%",
+        batteryLevel: "60%",
         temp: "28°C",
         ac: "Running",
         pdu: "Normal",
@@ -953,7 +953,7 @@ let roomsData = [
         door: "Closed",
         window: "Closed",
         ipsList: [
-            { id: "IPS-1", ratingWatts: 1600, batteryVoltage: 24, totalAh: 200, chargePercent: 50, brand: "Hamko200", installDate: "2026-01-15" },
+            { id: "IPS-1", ratingWatts: 1600, batteryVoltage: 24, totalAh: 200, chargePercent: 60, brand: "Hamko200", installDate: "2026-01-15" },
             
         ],
         powerSpecs: { systemVoltage: 220, oltCount: 1, mikrotikModel: "RB4011iGS+", switchCount: 1 },
@@ -991,9 +991,9 @@ let roomsData = [
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
             { device: "IPS-1 (2400W3K-Non-brand)", serial: "IPS-24V-4001", installDate: "15-Jan-2025", warranty: "Active", watt: 0, sources: ["Grid"] },
-            { device: "OLT DBC", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 60, maxWatt: 200, avgWatt: 60, sources: ["IPS-1", "Grid"] },
-            { device: "MikroTik CCR", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "Grid"] }, 
-            { device: "Switch Cisco", serial: "CS-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 200, maxWatt: 500, avgWatt: 200, sources: ["IPS-1", "Grid"] },
+            { device: "OLT DBC", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 40, maxWatt: 200, avgWatt: 40, sources: ["IPS-1", "Grid"] },
+            { device: "MikroTik CCR", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 50, maxWatt: 220, avgWatt: 50, sources: ["IPS-1", "Grid"] }, 
+            { device: "Switch Cisco", serial: "CS-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 150, maxWatt: 500, avgWatt: 150, sources: ["IPS-1", "Grid"] },
         ]
     },
 
@@ -1006,14 +1006,14 @@ let roomsData = [
         address: "Gazi party center, Bashabo, Dhaka",
         mainLine: "UP",
         ips: "ACTIVE",
-        batteryLevel: "100%",
+        batteryLevel: "75%",
         pdu: "Normal",
         fan: "ON",
         light: "OFF",
         door: "Closed",
         window: "Closed",
         ipsList: [
-            { id: "IPS-1", ratingWatts: 800, batteryVoltage: 12, totalAh: 100, chargePercent: 100, brand: "Hamko100", installDate: "2024-06-13" },
+            { id: "IPS-1", ratingWatts: 800, batteryVoltage: 12, totalAh: 100, chargePercent: 75, brand: "Hamko100", installDate: "2024-06-13" },
             
         ],
         powerSpecs: { systemVoltage: 220, oltCount: 1, mikrotikModel: "RB4011iGS+", switchCount: 1 },
@@ -1021,9 +1021,9 @@ let roomsData = [
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
             { device: "IPS-1 (800W1K-Non-brand)", serial: "IPS-12V-4001", installDate: "15-Jan-2025", warranty: "Active", watt: 0, sources: ["Grid"] },
-            { device: "OLT DBC", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 60, maxWatt: 200, avgWatt: 60, sources: ["IPS-1", "Grid"] },
-            { device: "MikroTik CCR", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "Grid"] }, 
-            { device: "Switch Cisco", serial: "CS-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 200, maxWatt: 500, avgWatt: 200, sources: ["IPS-1", "Grid"] },
+            { device: "OLT DBC", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 40, maxWatt: 200, avgWatt: 40, sources: ["IPS-1", "Grid"] },
+            { device: "MikroTik CCR", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 50, maxWatt: 220, avgWatt: 50, sources: ["IPS-1", "Grid"] }, 
+            { device: "Switch Cisco", serial: "CS-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 170, maxWatt: 500, avgWatt: 170, sources: ["IPS-1", "Grid"] },
         ]
     },
 
@@ -1036,7 +1036,7 @@ let roomsData = [
         address: "Barnamala road, Rail-Gate, Tangi, Gazipur",
         mainLine: "UP",
         ips: "ACTIVE",
-        batteryLevel: "100%",
+        batteryLevel: "80%",
         temp: "28°C",
         ac: "Running",
         pdu: "Normal",
@@ -1045,7 +1045,7 @@ let roomsData = [
         door: "Closed",
         window: "Closed",
         ipsList: [
-            { id: "IPS-1", ratingWatts: 800, batteryVoltage: 12, totalAh: 200, chargePercent: 100, brand: "RHF-Tublur200", installDate: "2025-01-15" },
+            { id: "IPS-1", ratingWatts: 800, batteryVoltage: 12, totalAh: 200, chargePercent: 80, brand: "RHF-Tublur200", installDate: "2025-01-15" },
             
         ],
         powerSpecs: { systemVoltage: 220, oltCount: 1, mikrotikModel: "RB4011iGS+", switchCount: 1 },
@@ -1172,13 +1172,43 @@ function calculateRoomPowerState(room) {
         }
     });
 
+
+
+// --- ব্যাকআপ টাইম ক্যালকুলেশন লজিক ---
+    let backupTimeFormatted = "0h 0m";
+    if (ipsList.length > 0) {
+        const ips = ipsList[0]; 
+        const voltage = ips.batteryVoltage || 24; 
+        const totalAh = ips.totalAh || 200;
+        
+        let chargePercent = ips.chargePercent !== undefined ? ips.chargePercent : 100;
+
+        let currentLoad = totalAvgWatt > 0 ? totalAvgWatt : 1;
+        if (ipsLoads[ips.id] && ipsLoads[ips.id] > 0) {
+            currentLoad = ipsLoads[ips.id]; 
+        }
+
+        let totalWh = voltage * totalAh;
+        let availableWh = totalWh * (chargePercent / 100);
+        let totalHours = availableWh / currentLoad;
+
+        let h = Math.floor(totalHours);
+        let m = Math.floor((totalHours - h) * 60);
+        backupTimeFormatted = `${h}h ${m}m`;
+    }
+
     return { 
         totalServerRoomWatt, 
         totalMaxWatt, 
         totalAvgWatt, 
-        ipsLoads 
+        ipsLoads,
+        backupTime: backupTimeFormatted 
     };
 }
+
+
+
+
 
 function getPowerBadgeSpecs(room) {
     let ipsRating = room.powerSpecs?.ipsRating;
@@ -1274,14 +1304,7 @@ function renderRooms(data) {
 
     data.forEach((room, index) => {
         const isAlert = room.mainLine === "DOWN" || (room.door && room.door.includes("OPEN"));
-        // const addressText = room.address || room.popAddress || room.officeAddress || "N/A";
-        //  const { ipsRating, batteryCount } = getPowerBadgeSpecs(room);
-
-        // const card = document.createElement('div');
-        // card.className = `room-card ${isAlert ? 'alert-border' : ''}`;
-        // card.style.animationDelay = `${index * 0.05}s`;
-        // card.onclick = () => openRoomDetails(room);
-
+        
 
 
         // Name ebong DST ID split kora (Jemon: "Dst-1,2 Quarter" -> DST ID: "Dst-1,2", Name: "Quarter")
@@ -1295,46 +1318,56 @@ function renderRooms(data) {
         card.style.animationDelay = `${index * 0.05}s`;
         
         // Modal khular purono onclick logic unchanged
-        card.onclick = () => openRoomDetails(room);
+       //  card.onclick = () => openRoomDetails(room);
 
+       card.onclick = () => {
+    const roomId = room.room_id || room.id; 
+    console.log("Fetching live data for Room ID:", roomId);
 
-        /*
-        card.innerHTML = `
-            <div class="card-top">
-                <h3>${room.name} <span style="font-size: 0.8rem; color: var(--text-secondary);">(${room.floor || 'N/A'})</span></h3>
-                <span class="status-tag ${room.mainLine === 'UP' ? 'normal' : 'down'}">
-                    Main: ${room.mainLine}
-                </span>
-            </div>
+    // Server theke nirdisto room er updated live data fetch kora
+    fetch(`/api/room/${roomId}/`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Room data not found in database');
+            }
+            return response.json();
+        })
+        .then(liveData => {
+            console.log("Live Data from DB:", liveData);
+
+            // ডাটাবেজের লাইভ ভ্যালুগুলো লোকাল room অবজেক্টে আপডেট করে দিলাম
+            room.battery_level = liveData.battery_level;
+            room.temp = liveData.temp;
+            room.total_watt = liveData.total_watt;
+            room.door = liveData.door;
+            room.mainline = liveData.mainline;
+
+          // ২. মোডালের ভেতরে ব্যাটারি কার্ডে নিখুঁতভাবে দেখানোর জন্য ipsList-এর chargePercent ও আপডেট করে দিলাম
+            if (room.ipsList && room.ipsList.length > 0) {
+                room.ipsList.forEach(ips => {
+                    ips.chargePercent = liveData.battery_level;
+                });
+            }
+
+            // ৩. এখন আপডেট করা সম্পূর্ণ রুম অবজেক্টটি পাস করলাম
+            openRoomDetails(room);
             
-            <div class="pop-address-text">
-                📍 <strong>Address:</strong> ${addressText}
-            </div>
 
-            <div class="badge-container" style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px;">
-                <span style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.3); color: #38bdf8; padding: 2px 8px; border-radius: 6px; font-size: 0.75rem;">⚡ ${room.powerSpecs?.ipsRating || 'N/A'}</span>
-                <span style="background: rgba(168, 85, 247, 0.15); border: 1px solid rgba(168, 85, 247, 0.3); color: #c084fc; padding: 2px 8px; border-radius: 6px; font-size: 0.75rem;">🔋 ${room.powerSpecs?.batteryCount || 'N/A'}</span>
-                <span style="background: rgba(34, 197, 94, 0.15); border: 1px solid rgba(34, 197, 94, 0.3); color: #4ade80; padding: 2px 8px; border-radius: 6px; font-size: 0.75rem;">🌐 ${room.powerSpecs?.oltCount || 0} OLT</span>
-            </div>
-            
+            // ৪. ডাইরেক্ট ফিক্স: মোডাল ওপেন হওয়ামাত্র SoC টেক্সট এলিমেন্টে লাইভ ভ্যালু বসিয়ে দিলাম
+            setTimeout(() => {
+                const modalBatteryLevelEl = document.getElementById('modalBatteryLevel');
+                if (modalBatteryLevelEl) {
+                    modalBatteryLevelEl.innerText = liveData.battery_level + '%';
+                }
+            }, 50);
+        })
+        .catch(error => {
+            console.error("Error fetching live room data:", error);
+            // Fallback: API fail korle purono local room data diye open korbe
+            openRoomDetails(room);
+        });
+};
 
-            
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; background: rgba(15, 23, 42, 0.5); padding: 10px; border-radius: 8px; margin-bottom: 12px; font-size: 0.8rem;">
-                <div>Temp: <strong style="color: #f1f5f9;">${room.temp || 'N/A'}</strong></div>
-                <div>Door: <strong style="${room.door?.includes('OPEN') ? 'color: #ef4444;' : 'color: #4ade80;'}">${room.door || 'Closed'}</strong></div>
-                <div>Power: <strong style="color: #f1f5f9;">${room.mainLine === 'UP' ? 'Grid' : 'IPS'}</strong></div>
-                <div>Battery: <strong style="color: #38bdf8;">${room.batteryLevel || 'N/A'}</strong></div>
-            </div> 
-
-            <div class="device-pills" style="display: flex; gap: 6px; flex-wrap: wrap;">
-                <span class="pill ${room.devices?.olt === 'Online' ? 'ok' : 'err'}">OLT</span>
-                <span class="pill ${room.devices?.mikrotik === 'Online' ? 'ok' : 'err'}">MikroTik</span>
-                <span class="pill ${room.devices?.switch === 'Online' ? 'ok' : 'err'}">Switch</span>
-                <span class="pill ${room.devices?.camera === 'Online' ? 'ok' : 'err'}">Camera</span>
-            </div>
-        `;
-        container.appendChild(card);
-        */
 
        // Card-er vitorer pure minimalistic content (Shudhu LED, DST ID, & Name)
         card.innerHTML = `
@@ -1891,25 +1924,29 @@ function renderIpsBatteries(roomData, isGridDownExplicit, ipsLoads = {}, totalMa
 
 
 
-      htmlContent += `
+    htmlContent += `
     <div class="ips-battery-card" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
         <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 4px;">
-
-
             <span style="font-size: 13px; font-weight: 800; color: ${isOverload ? '#ef4444' : '#ffffff'};">
               ${displayMaxWatt}W 
             <span style="font-size: 9px; color: #f59e0b; font-weight: 600;">(Max)</span>
            </span>
-
             <span style="font-size: 10px; font-weight: 600; color: #38bdf8;">~${displayAvgWatt}W (Avg)</span>
         </div>
         
+        <!-- Battery Casing with Glow & Variable -->
         <div class="battery-casing ${chargingClass} ${lowBatteryClass}" 
-             style="position: relative; width: 44px; height: 85px; border: 2px solid ${themeColor}; border-radius: 6px; background: rgba(15, 23, 42, 0.75); display: flex; flex-direction: column-reverse; overflow: hidden;">
-            <div style="position: absolute; top: -5px; left: 50%; transform: translateX(-50%); width: 14px; height: 3px; background: ${themeColor}; border-radius: 2px 2px 0 0;"></div>
-            <div id="liquidFill" class="liquid-fill" style="height: ${batteryPercent}%; width: 100%; background: ${themeColor}; transition: height 0.8s ease-in-out;"></div>
-            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 13px; z-index: 3;">
-                ${isGridOn ? '100%' : ''}
+             style="border-color: ${themeColor}; position: relative; width: 52px; height: 100px; border-radius: 12px; background: rgba(10, 16, 30, 0.9); display: flex; flex-direction: column-reverse; overflow: hidden; box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.9), 0 0 20px ${themeColor}60; margin: 8px 0;">
+            
+            <!-- Battery Top Cap -->
+            <div style="position: absolute; top: -6px; left: 50%; transform: translateX(-50%); width: 16px; height: 4px; background: ${themeColor}; border-radius: 3px 3px 0 0; z-index: 4;"></div>
+
+            <!-- Water Liquid Fill with Class & CSS Variable for Wave -->
+            <div id="liquidFill" class="liquid-fill" style="height: ${batteryPercent}%; --liquid-color: ${themeColor}; z-index: 2;"></div>
+            
+            <!-- Bold, Smart & Unique Percentage Typography -->
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 14px; font-weight: 900; letter-spacing: 0.8px; color: #ffffff; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95), 0 0 14px ${themeColor}; z-index: 10;">
+                ${batteryPercent}%
             </div>
         </div>
 
@@ -2088,3 +2125,4 @@ filterAndRenderRooms();
 
 
 
+   
