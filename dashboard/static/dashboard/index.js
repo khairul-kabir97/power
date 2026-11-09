@@ -30,10 +30,10 @@ let roomsData = [
         meterInfo: { accountNo: "998231412", balanceBDT: 3420.00, lastRechargeDate: "2026-07-15", type: "Prepaid" },
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
-            { device: "IPS-1 (2400W3K DGLOG)", serial: "IPS-96V-88219", installDate: "15-Jan-2022", warranty: "Active", watt: 0, sources: ["Grid"] },
-            { device: "IPS-2 (2400W3K DGLOG)", serial: "IPS-96V-88219", installDate: "15-Jan-2023", warranty: "Active", watt: 0, sources: ["Grid"] },
-            { device: "IPS-3 (2400W3K Kstar)", serial: "IPS-96V-88219", installDate: "15-Jan-2020", warranty: "Active", watt: 0, sources: ["Grid"] },
-            { device: "IPS-4 (6400W8K Non-Brand)", serial: "IPS-96V-88219", installDate: "15-Jan-2026", warranty: "Active", watt: 0, sources: ["Grid"] },
+            { device: "IPS-1 (2400W3K DGLOG)", serial: "IPS-96V-88219", installDate: "15-Jan-2023", warranty: "Expired", watt: 0, sources: ["Grid"] },
+            { device: "IPS-2 (2400W3K DGLOG)", serial: "IPS-96V-88219", installDate: "15-Jan-2023", warranty: "Expired", watt: 0, sources: ["Grid"] },
+            { device: "IPS-3 (2400W3K Kstar)", serial: "IPS-96V-88219", installDate: "15-Jan-2020", warranty: "Expired", watt: 0, sources: ["Grid"] },
+            { device: "IPS-4 (6400W8K Non-Brand)", serial: "IPS-96V-88219", installDate: "15-Jan-2024", warranty: "Expired", watt: 0, sources: ["Grid"] },
             { device: "ATS (Double Source)", serial: "IPS-96V-88219", installDate: "15-Jan-2026", warranty: "Active", sources: ["IPS-3", "IPS-4"] },
             { device: "OLT Huawei-1&3-A", serial: "OLT-Huawei-5521", installDate: "20-Aug-2020", warranty: "Active", watt: 500, maxwatt: 1500, avgWatt: 500, sources: ["ATS"] },
             { device: "OLT Huawei-2A", serial: "OLT-HUAWEI-5521", installDate: "20-Aug-2021", warranty: "Active", watt: 200, maxwatt: 1000, avgWatt: 200, sources: ["ATS"] },
@@ -85,9 +85,9 @@ let roomsData = [
         meterInfo: { accountNo: "998231412", balanceBDT: 3420.00, lastRechargeDate: "2026-07-15", type: "Prepaid" },
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
-            { device: "IPS-1(12000W12K Kstar)", serial: "IPS-192V-88219", installDate: "15-Jan-2022", warranty: "Active", watt: 0, sources: ["Grid"] },
+            { device: "IPS-1(12000W12K Kstar)", serial: "IPS-192V-88219", installDate: "15-Jan-2018", warranty: "Expired", watt: 0, sources: ["Grid"] },
             { device: "IPS-2(3200W4K Non-Brand)", serial: "IPS-48V-88219", installDate: "20-Oct-2026", warranty: "Active", watt: 0, sources: ["Grid"] },
-            { device: "IPS-3(1600W2K DGLog)", serial: "IPS-924V-88219", installDate: "15-Jan-2020", warranty: "Active", watt: 0, sources: ["Grid"] },
+            { device: "IPS-3(1600W2K DGLog)", serial: "IPS-924V-88219", installDate: "15-Jan-2020", warranty: "Expired", watt: 0, sources: ["Grid"] },
             { device: "MikroTik CCR1036", serial: "MT-1036-3392", installDate: "01-Mar-2023", warranty: "Expired", watt: 250, maxWatt: 750, avgWatt: 250, sources:["IPS-1","IPS-2"]},
             { device: "Switch Cisco", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 120, maxWatt: 650, avgWatt: 120, sources: ["IPS-1", "IPS-2"] }, 
             { device: "Switch Cisco", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 120, maxWatt: 650, avgWatt: 120, sources: ["IPS-1", "IPS-2"] },
@@ -139,7 +139,7 @@ let roomsData = [
         meterInfo: { accountNo: "998231412", balanceBDT: 340.00, lastRechargeDate: "2026-08-15", type: "Prepaid" },
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
-            { device: "IPS-1 (2400W3K Non-Brand)", serial: "IPS-24V-2001", installDate: "15-Jan-2022", warranty: "Active", watt: 0, sources: ["Grid"] },
+            { device: "IPS-1 (2400W3K Non-Brand)", serial: "IPS-24V-2001", installDate: "09-Jan-2025", warranty: "Active", watt: 0, sources: ["Grid"] },
             { device: "OLT Huawei-1B", serial: "OLT-Huawei-5521", installDate: "20-Aug-2020", warranty: "Active", watt: 220, maxWatt: 1000, avgWatt: 220, sources: ["IPS-1", ""] },
             { device: "MikroTik Server", serial: "MT-1036-3392", installDate: "01-Mar-2023", warranty: "Expired", watt: 180, maxWatt: 750, avgWatt: 180, sources: ["IPS-1", "Grid"] },
             { device: "Switch SWT000000", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 120, maxWatt: 550, avgWatt: 120, sources: ["IPS-1", "Grid"] }, 
@@ -171,7 +171,7 @@ let roomsData = [
         meterInfo: { accountNo: "998231412", balanceBDT: 340.00, lastRechargeDate: "2026-08-15", type: "Prepaid" },
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
-            { device: "IPS-1 (2400W3K Non-Brand)", serial: "IPS-24V-2001", installDate: "15-Jan-2022", warranty: "Active", watt: 0, sources: ["Grid"] },
+            { device: "IPS-1 (2400W3K Non-Brand)", serial: "IPS-24V-2001", installDate: "07-Jul-2022", warranty: "Active", watt: 0, sources: ["Grid"] },
             { device: "OLT Huawei-1B", serial: "OLT-Huawei-5521", installDate: "20-Aug-2020", warranty: "Active", watt: 220, maxWatt: 1000, avgWatt: 220, sources: ["IPS-1", ""] },
             { device: "MikroTik Series", serial: "MT-1036-3392", installDate: "01-Mar-2023", warranty: "Expired", watt: 180, maxWatt: 750, avgWatt: 180, sources: ["IPS-1", "Grid"] },
             { device: "Switch SWT000000", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 120, maxWatt: 550, avgWatt: 120, sources: ["IPS-1", "Grid"] }, 
@@ -204,7 +204,7 @@ let roomsData = [
         meterInfo: { accountNo: "998231412", balanceBDT: 1400.00, lastRechargeDate: "2026-08-15", type: "Prepaid" },
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
-            { device: "IPS-1 (1600W2K DGLOG)", serial: "IPS-24V-4001", installDate: "15-Jan-2022", warranty: "Active", watt: 0, sources: ["Grid"] },
+            { device: "IPS-1 (1600W2K DGLOG)", serial: "IPS-24V-4001", installDate: "15-Jan-2023", warranty: "Expired", watt: 0, sources: ["Grid"] },
             { device: "OLT DBC", serial: "OLT-DBC-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 70, maxWatt: 440, avgWatt: 70, sources: ["IPS-1", "Grid"] },
             { device: "MikroTik CCR000000", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 60, maxWatt: 220, avgWatt: 60, sources: ["IPS-1", "Grid"] },
             { device: "MikroTik CCR000000", serial: "MT-xxxxxxxyz", installDate: "00.00.0000", warranty: "Expired", watt: 60, maxWatt: 220, avgWatt: 60, sources: ["IPS-1", "Grid"] },
@@ -239,7 +239,7 @@ let roomsData = [
         meterInfo: { accountNo: "998231412", balanceBDT: 1340.00, lastRechargeDate: "2026-08-15", type: "Prepaid" },
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
-            { device: "IPS-1 (2400W3K Non-Brand)", serial: "IPS-24V-4001", installDate: "15-Jan-2022", warranty: "Active", watt: 0, sources: ["Grid"] },
+            { device: "IPS-1 (2400W3K Non-Brand)", serial: "IPS-24V-4001", installDate: "22-Apr-2026", warranty: "Active", watt: 0, sources: ["Grid"] },
             { device: "OLT VSOL", serial: "OLT-DBC-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 100, maxWatt: 440, avgWatt: 100, sources: ["IPS-1", "Grid"] },
             { device: "MikroTik CCR000000", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "Grid"] },
             { device: "MikroTik CCR000000", serial: "MT-xxxxxxxyz", installDate: "00.00.0000", warranty: "Expired", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "Grid"] },
@@ -271,7 +271,7 @@ let roomsData = [
         meterInfo: { accountNo: "998231412", balanceBDT: 340.00, lastRechargeDate: "2026-08-15", type: "Prepaid" },
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
-            { device: "IPS-1 (2400W3K Non-Brand)", serial: "IPS-24V-4001", installDate: "15-Jan-2022", warranty: "Active", watt: 0, sources: ["Grid"] },
+            { device: "IPS-1 (2400W3K Non-Brand)", serial: "IPS-24V-4001", installDate: "02-Nov-2022", warranty: "Active", watt: 0, sources: ["Grid"] },
             { device: "OLT Huawei", serial: "OLT-Huawei-5521", installDate: "20-Aug-2020", warranty: "Active", watt: 200, maxWatt: 1000, avgWatt: 200, sources: ["IPS-1", ""] },
             { device: "MikroTik CCR000000", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "Grid"] },
             { device: "MikroTik CCR000000", serial: "MT-xxxxxxxyz", installDate: "00.00.0000", warranty: "Expired", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "Grid"] },
@@ -303,7 +303,7 @@ let roomsData = [
         meterInfo: { accountNo: "998231412", balanceBDT: 340.00, lastRechargeDate: "2026-08-15", type: "Prepaid" },
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
-            { device: "IPS-1 (1600W2K DGLOG)", serial: "IPS-24V-4001", installDate: "15-Jan-2022", warranty: "Active", watt: 0, sources: ["Grid"] },
+            { device: "IPS-1 (1600W2K DGLOG)", serial: "IPS-24V-4001", installDate: "15-Jan-2022", warranty: "Expired", watt: 0, sources: ["Grid"] },
             { device: "OLT DBC", serial: "OLT-DBC-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 100, maxWatt: 440, avgWatt: 100, sources: ["IPS-1", "Grid"] },
             { device: "MikroTik CCR000000", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "Grid"] },
     
@@ -334,7 +334,7 @@ let roomsData = [
         meterInfo: { accountNo: "998231412", balanceBDT: 340.00, lastRechargeDate: "2026-08-15", type: "Prepaid" },
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
-            { device: "IPS-1 (2400W3k Non-Brand)", serial: "IPS-24V-4001", installDate: "15-Jan-2022", warranty: "Active", watt: 0, sources: ["Grid"] },
+            { device: "IPS-1 (2400W3k Non-Brand)", serial: "IPS-24V-4001", installDate: "01-Jan-2026", warranty: "Active", watt: 0, sources: ["Grid"] },
             { device: "OLT DBC", serial: "OLT-DBC-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 150, maxWatt: 500, avgWatt: 150, sources: ["IPS-1", "Grid"] },
             { device: "MikroTik CCR000000", serial: "MT-xxxxxxxyz", installDate: "00.00.0000", warranty: "Expired", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "Grid"] },
             { device: "Switch SWT000000", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 160, maxWatt: 550, avgWatt: 160, sources: ["IPS-1", "Grid"] },
@@ -399,7 +399,7 @@ let roomsData = [
         meterInfo: { accountNo: "998231412", balanceBDT: 340.00, lastRechargeDate: "2026-08-15", type: "Prepaid" },
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
-            { device: "IPS-1 (2400W3K Non-Brand)", serial: "IPS-24V-4001", installDate: "09-Jan-2025", warranty: "Active", watt: 0, sources: ["Grid"] },
+            { device: "IPS-1 (2400W3K Non-Brand)", serial: "IPS-24V-4001", installDate: "06-Jun-2025", warranty: "Active", watt: 0, sources: ["Grid"] },
             { device: "OLT DBC", serial: "OLT-DBC-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 80, maxWatt: 400, avgWatt: 80, sources: ["IPS-1", "Grid"] },
             { device: "MikroTik CCR000000", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "Grid"] },
              { device: "Switch SWT000000", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 150, maxWatt: 550, avgWatt: 150, sources: ["IPS-1", "Grid"] }, 
@@ -431,7 +431,7 @@ let roomsData = [
         meterInfo: { accountNo: "998231412", balanceBDT: 340.00, lastRechargeDate: "2026-08-15", type: "Prepaid" },
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
-            { device: "IPS-1 (2400W3K Non-Brand)", serial: "IPS-24V-4001", installDate: "09-Jan-2025", warranty: "Active", watt: 0, sources: ["Grid"] },
+            { device: "IPS-1 (2400W3K Non-Brand)", serial: "IPS-24V-4001", installDate: "09-Jan-2023", warranty: "Expired", watt: 0, sources: ["Grid"] },
             { device: "OLT BDCOM", serial: "OLT-DBC-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 80, maxWatt: 440, avgWatt: 80, sources: ["IPS-1", "Grid"] },
             { device: "MikroTik CCR000000", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "Grid"] },
             { device: "Switch SWT000000", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 150, maxWatt: 550, avgWatt: 150, sources: ["IPS-1", "Grid"] }, 
@@ -464,7 +464,7 @@ let roomsData = [
         meterInfo: { accountNo: "998231412", balanceBDT: 340.00, lastRechargeDate: "2026-08-15", type: "Prepaid" },
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
-            { device: "IPS-1 (3200W4K DGLOG)", serial: "IPS-48V-4001", installDate: "09-Jan-2025", warranty: "Active", watt: 0, sources: ["Grid"] },
+            { device: "IPS-1 (3200W4K DGLOG)", serial: "IPS-48V-4001", installDate: "09-Jan-2020", warranty: "Expired", watt: 0, sources: ["Grid"] },
             { device: "OLT Huawei", serial: "OLT-HWI-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 200, maxWatt: 1000, avgWatt: 200, sources: ["IPS-1", ""] },
             { device: "MikroTik", serial: "DL-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 200, maxWatt: 750, avgWatt: 200, sources: ["IPS-1", "Grid"] },
             { device: "MikroTik", serial: "DL-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 200, maxWatt: 750, avgWatt: 200, sources: ["IPS-1", "Grid"] },
@@ -535,7 +535,7 @@ let roomsData = [
         meterInfo: { accountNo: "998231412", balanceBDT: 340.00, lastRechargeDate: "2026-08-15", type: "Prepaid" },
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
-            { device: "IPS-1 (2400W3K Kstar)", serial: "IPS-96V-2001", installDate: "09-Jan-2025", warranty: "Active", watt: 0, sources: ["Grid"] },
+            { device: "IPS-1 (2400W3K Kstar)", serial: "IPS-96V-2001", installDate: "09-Jan-2020", warranty: "Expired", watt: 0, sources: ["Grid"] },
             { device: "OLT VSOL", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 180, maxWatt: 450, avgWatt: 100, sources: ["IPS-1", "Grid"] },
             { device: "MikroTik CCR", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "Grid"] }, 
             { device: "MikroTik CCR", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "Grid"] },
@@ -569,7 +569,7 @@ let roomsData = [
         meterInfo: { accountNo: "998231412", balanceBDT: 340.00, lastRechargeDate: "2026-08-15", type: "Prepaid" },
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
-            { device: "IPS-1 (800W1K No-Brand)", serial: "IPS-12V-2001", installDate: "09-Jan-2025", warranty: "Active", watt: 0, sources: ["Grid"] },
+            { device: "IPS-1 (800W1K No-Brand)", serial: "IPS-12V-2001", installDate: "09-Jan-2021", warranty: "Expired", watt: 0, sources: ["Grid"] },
             { device: "OLT VSOL", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 50, maxWatt: 220, avgWatt: 50, sources: ["IPS-1", "Grid"] },
             { device: "OLT VSOL", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 50, maxWatt: 220, avgWatt: 50, sources: ["IPS-1", "Grid"] },
             { device: "MikroTik ECOM", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 60, maxWatt: 250, avgWatt: 60, sources: ["IPS-1", "Grid"] }, 
@@ -603,7 +603,7 @@ let roomsData = [
         meterInfo: { accountNo: "998231412", balanceBDT: 340.00, lastRechargeDate: "2026-08-15", type: "Prepaid" },
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
-            { device: "IPS-1 (1600W2K Non-Brand)", serial: "IPS-24V-2001", installDate: "09-Jan-2025", warranty: "Active", watt: 0, sources: ["Grid"] },
+            { device: "IPS-1 (1600W2K Non-Brand)", serial: "IPS-24V-2001", installDate: "09-Jan-2020", warranty: "Expired", watt: 0, sources: ["Grid"] },
             { device: "OLT VSOL", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "Grid"] },
             { device: "OLT VSOL", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "Grid"] },
             { device: "MikroTik CCR", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 80, maxWatt: 220, avgWatt: 80, sources: ["IPS-1", "Grid"] }, 
@@ -637,7 +637,7 @@ let roomsData = [
         meterInfo: { accountNo: "998231412", balanceBDT: 340.00, lastRechargeDate: "2026-08-15", type: "Prepaid" },
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
-            { device: "IPS-1 (2400W3K Non-Brand)", serial: "IPS-24V-2001", installDate: "01-Jan-2024", warranty: "Active", watt: 0, sources: ["Grid"] },
+            { device: "IPS-1 (2400W3K Non-Brand)", serial: "IPS-24V-2001", installDate: "01-Jan-2024", warranty: "Expired",watt: 0, sources: ["Grid"] },
             { device: "OLT DBC", serial: "OLT-DBC-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 75, maxWatt: 250, avgWatt: 75, sources: ["IPS-1", "Grid"] },
             { device: "OLT DBC", serial: "OLT-DBC-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 75, maxWatt: 250, avgWatt: 75, sources: ["IPS-1", "Grid"] },
             { device: "MikroTik CCR", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "Grid"] }, 
@@ -673,7 +673,7 @@ let roomsData = [
         meterInfo: { accountNo: "998231412", balanceBDT: 340.00, lastRechargeDate: "2026-08-15", type: "Prepaid" },
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
-            { device: "IPS-1 (800W1K Luminous)", serial: "IPS-12V-2001", installDate: "09-Jan-2025", warranty: "Active", watt: 0, sources: ["Grid"] },
+            { device: "IPS-1 (800W1K Luminous)", serial: "IPS-12V-2001", installDate: "09-Jan-2023", warranty: "Expired", watt: 0, sources: ["Grid"] },
             { device: "OLT VSOL", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "Grid"] },
             { device: "MikroTik CCR", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 80, maxWatt: 220, avgWatt: 80, sources: ["IPS-1", "Grid"] }, 
             { device: "Switch Cisco", serial: "CS-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 160, maxWatt: 500, avgWatt: 160, sources: ["IPS-1", "Grid"] },
@@ -706,8 +706,8 @@ let roomsData = [
         meterInfo: { accountNo: "998231412", balanceBDT: 340.00, lastRechargeDate: "2026-08-15", type: "Prepaid" },
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
-            { device: "IPS-1 (2400W3K Non-Brand)", serial: "IPS-24V-3101", installDate: "01-Jun-2024", warranty: "Active", watt: 0, sources: ["Grid"] },
-            { device: "IPS-2 (1600W2K Non-Brand)", serial: "IPS-24V-3102", installDate: "01-Sep-2024", warranty: "Active", watt: 0, sources: ["Grid"] },
+            { device: "IPS-1 (2400W3K Non-Brand)", serial: "IPS-24V-3101", installDate: "01-Jun-2024", warranty: "Expired", watt: 0, sources: ["Grid"] },
+            { device: "IPS-2 (1600W2K Non-Brand)", serial: "IPS-24V-3102", installDate: "01-Sep-2024", warranty: "Expired", watt: 0, sources: ["Grid"] },
             { device: "OLT DBC", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "IPS-2"] },
             { device: "OLT BDCOM", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "IPS-2"] },
             { device: "MikroTik ECOM", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 300, maxWatt: 750, avgWatt: 300, sources: ["IPS-1", "IPS-2"] }, 
@@ -778,8 +778,8 @@ let roomsData = [
         meterInfo: { accountNo: "998231412", balanceBDT: 340.00, lastRechargeDate: "2026-08-15", type: "Prepaid" },
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
-            { device: "IPS-1 (2400W3K Non-Brand)", serial: "IPS-24V-3101", installDate: "01-Jun-2024", warranty: "Active", watt: 0, sources: ["Grid"] },
-            { device: "IPS-2 (2400W3K Non-Brand)", serial: "IPS-24V-3102", installDate: "01-Sep-2024", warranty: "Active", watt: 0, sources: ["Grid"] },
+            { device: "IPS-1 (2400W3K Non-Brand)", serial: "IPS-24V-3101", installDate: "01-Jun-2026", warranty: "Active", watt: 0, sources: ["Grid"] },
+            { device: "IPS-2 (2400W3K Non-Brand)", serial: "IPS-24V-3102", installDate: "01-Sep-2026", warranty: "Active", watt: 0, sources: ["Grid"] },
             { device: "OLT DBC", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "IPS-2"] },
             { device: "OLT BDCOM", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "IPS-2"] },
             { device: "OLT Huawei", serial: "OLT-HWI-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 300, maxWatt: 1000, avgWatt: 300, sources: ["IPS-1", ""] },
@@ -817,7 +817,7 @@ let roomsData = [
         meterInfo: { accountNo: "998231412", balanceBDT: 340.00, lastRechargeDate: "2026-08-15", type: "Prepaid" },
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
-            { device: "IPS-1 (800W1K Luminous)", serial: "IPS-12V-2001", installDate: "09-Jan-2025", warranty: "Active", watt: 0, sources: ["Grid"] },
+            { device: "IPS-1 (800W1K Luminous)", serial: "IPS-12V-2001", installDate: "09-Jan-2020", warranty: "Expired", watt: 0, sources: ["Grid"] },
             { device: "MikroTik CCR", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 50, maxWatt: 220, avgWatt: 50, sources: ["IPS-1", "Grid"] }, 
             { device: "MikroTik CCR", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 50, maxWatt: 220, avgWatt: 50, sources: ["IPS-1", "Grid"] }, 
             { device: "MikroTik CCR", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 50, maxWatt: 220, avgWatt: 50, sources: ["IPS-1", "Grid"] },
@@ -855,7 +855,7 @@ let roomsData = [
         meterInfo: { accountNo: "998231412", balanceBDT: 340.00, lastRechargeDate: "2026-08-15", type: "Prepaid" },
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
-            { device: "IPS-1 (800W1K Luminous)", serial: "IPS-12V-2001", installDate: "09-Jan-2025", warranty: "Active", watt: 0, sources: ["Grid"] },
+            { device: "IPS-1 (800W1K Luminous)", serial: "IPS-12V-2001", installDate: "09-Jan-2020", warranty: "Expired", watt: 0, sources: ["Grid"] },
             { device: "OLT VSOL", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 90, maxWatt: 440, avgWatt: 90, sources: ["IPS-1", "Grid"] },
             { device: "MikroTik CCR", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 50, maxWatt: 250, avgWatt: 50, sources: ["IPS-1", "Grid"] }, 
             { device: "Switch BDCOM", serial: "CS-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 70, maxWatt: 350, avgWatt: 70, sources: ["IPS-1", "Grid"] },
@@ -889,8 +889,8 @@ let roomsData = [
         meterInfo: { accountNo: "998231412", balanceBDT: 340.00, lastRechargeDate: "2026-08-15", type: "Prepaid" },
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
-            { device: "IPS-1 (2400W3K Kstar)", serial: "IPS-96V-2001", installDate: "09-Jan-2025", warranty: "Active", watt: 0, sources: ["Grid"] },
-            { device: "IPS-2 (2400W3K Non-Brand)", serial: "IPS-24V-2001", installDate: "09-Jan-2025", warranty: "Active", watt: 0, sources: ["Grid"] },
+            { device: "IPS-1 (2400W3K Kstar)", serial: "IPS-96V-2001", installDate: "09-Jan-2020", warranty: "Expired", watt: 0, sources: ["Grid"] },
+            { device: "IPS-2 (2400W3K Non-Brand)", serial: "IPS-24V-2001", installDate: "09-May-2026", warranty: "Active", watt: 0, sources: ["Grid"] },
             { device: "OLT Huawei", serial: "OLT-HWI-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 300, maxWatt: 1000, avgWatt: 300, sources: ["IPS-1", ""] },
             { device: "OLT VSOL", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "IPS-2"] },
             { device: "OLT VSOL", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", ""] },
@@ -928,7 +928,7 @@ let roomsData = [
         meterInfo: { accountNo: "123456789", balanceBDT: 1450.50, lastRechargeDate: "2026-07-20", type: "Prepaid" },
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
-            { device: "IPS-1 (800W1K-Non-Brand)", serial: "IPS-24V-4001", installDate: "15-Jan-2025", warranty: "Active", watt: 0, sources: ["Grid"] },
+            { device: "IPS-1 (800W1K-Non-Brand)", serial: "IPS-24V-4001", installDate: "15-Jan-2023", warranty: "Active", watt: 0, sources: ["Grid"] },
              { device: "OLT VSOL", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "Grid"] },
             { device: "MikroTik CCR", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "Grid"] }, 
             { device: "Switch Cisco", serial: "CS-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 180, maxWatt: 500, avgWatt: 180, sources: ["IPS-1", "Grid"] },
@@ -960,7 +960,7 @@ let roomsData = [
         meterInfo: { accountNo: "123456789", balanceBDT: 1450.50, lastRechargeDate: "2026-07-20", type: "Prepaid" },
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
-            { device: "IPS-1 (1600W2K-Luminous)", serial: "IPS-24V-4001", installDate: "15-Jan-2025", warranty: "Active", watt: 0, sources: ["Grid"] },
+            { device: "IPS-1 (1600W2K-Luminous)", serial: "IPS-24V-4001", installDate: "15-Jan-2020", warranty: "Expired", watt: 0, sources: ["Grid"] },
              { device: "OLT BDcom", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "Grid"] },
             { device: "MikroTik CCR", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "Grid"] }, 
             { device: "Switch Cisco", serial: "CS-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 180, maxWatt: 500, avgWatt: 180, sources: ["IPS-1", "Grid"] },
@@ -990,7 +990,7 @@ let roomsData = [
         meterInfo: { accountNo: "123456789", balanceBDT: 1450.50, lastRechargeDate: "2026-07-20", type: "Prepaid" },
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
-            { device: "IPS-1 (2400W3K-Non-brand)", serial: "IPS-24V-4001", installDate: "15-Jan-2025", warranty: "Active", watt: 0, sources: ["Grid"] },
+            { device: "IPS-1 (2400W3K-Non-brand)", serial: "IPS-24V-4001", installDate: "13-Sep-2026", warranty: "Active", watt: 0, sources: ["Grid"] },
             { device: "OLT DBC", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 40, maxWatt: 200, avgWatt: 40, sources: ["IPS-1", "Grid"] },
             { device: "MikroTik CCR", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 50, maxWatt: 220, avgWatt: 50, sources: ["IPS-1", "Grid"] }, 
             { device: "Switch Cisco", serial: "CS-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 150, maxWatt: 500, avgWatt: 150, sources: ["IPS-1", "Grid"] },
@@ -1020,7 +1020,7 @@ let roomsData = [
         meterInfo: { accountNo: "123456789", balanceBDT: 1450.50, lastRechargeDate: "2026-07-20", type: "Prepaid" },
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
-            { device: "IPS-1 (800W1K-Non-brand)", serial: "IPS-12V-4001", installDate: "15-Jan-2025", warranty: "Active", watt: 0, sources: ["Grid"] },
+            { device: "IPS-1 (800W1K-Non-brand)", serial: "IPS-12V-4001", installDate: "15-Jan-2020", warranty: "Expired", watt: 0, sources: ["Grid"] },
             { device: "OLT DBC", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 40, maxWatt: 200, avgWatt: 40, sources: ["IPS-1", "Grid"] },
             { device: "MikroTik CCR", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 50, maxWatt: 220, avgWatt: 50, sources: ["IPS-1", "Grid"] }, 
             { device: "Switch Cisco", serial: "CS-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 170, maxWatt: 500, avgWatt: 170, sources: ["IPS-1", "Grid"] },
@@ -1052,7 +1052,7 @@ let roomsData = [
         meterInfo: { accountNo: "123456789", balanceBDT: 1450.50, lastRechargeDate: "2026-07-20", type: "Prepaid" },
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
-            { device: "IPS-1 (800W1K-Non-brand)", serial: "IPS-12V-4001", installDate: "15-Jan-2025", warranty: "Active", watt: 0, sources: ["Grid"] },
+            { device: "IPS-1 (800W1K-Non-brand)", serial: "IPS-12V-4001", installDate: "15-Jan-2020", warranty: "Expired", watt: 0, sources: ["Grid"] },
             { device: "OLT BDcom", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 80, maxWatt: 220, avgWatt: 80, sources: ["IPS-1", "Grid"] },
             { device: "OLT DBC", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 160, maxWatt: 400, avgWatt: 160, sources: ["IPS-1", "Grid"] },
             { device: "MikroTik Dell Sarver", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 250, maxWatt: 750, avgWatt: 250, sources: ["IPS-1", "Grid"] }, 
