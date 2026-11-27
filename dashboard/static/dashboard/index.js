@@ -448,7 +448,7 @@ let roomsData = [
         address: "Mirbag, Natun Rasta, Rampura, Dhaka",
         mainLine: "UP",
         ips: "STANDBY",
-        batteryLevel: "45%",
+        batteryLevel: "100%",
         temp: "21°C",
         ac: "N/A",
         pdu: "Normal",
