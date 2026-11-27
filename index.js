@@ -303,7 +303,7 @@ let roomsData = [
         meterInfo: { accountNo: "998231412", balanceBDT: 340.00, lastRechargeDate: "2026-08-15", type: "Prepaid" },
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
-            { device: "IPS-1 (1600W2K DGLOG)", serial: "IPS-24V-4001", installDate: "15-Jan-2022", warranty: "Active", watt: 0, sources: ["Grid"] },
+            { device: "IPS-1 (2400W3K Non-Brand)", serial: "IPS-24V-4001", installDate: "16-Nov-2026", warranty: "Active", watt: 0, sources: ["Grid"] },
             { device: "OLT DBC", serial: "OLT-DBC-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 100, maxWatt: 440, avgWatt: 100, sources: ["IPS-1", "Grid"] },
             { device: "MikroTik CCR000000", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "Grid"] },
     
@@ -448,7 +448,7 @@ let roomsData = [
         address: "Mirbag, Natun Rasta, Rampura, Dhaka",
         mainLine: "UP",
         ips: "STANDBY",
-        batteryLevel: "45%",
+        batteryLevel: "100%",
         temp: "21°C",
         ac: "N/A",
         pdu: "Normal",
@@ -457,7 +457,7 @@ let roomsData = [
         door: "OPEN ⚠️",
         window: "Closed",
         ipsList: [
-            { id: "IPS-1", ratingWatts: 3200, batteryVoltage: 48, totalAh: 200, chargePercent: 45, brand: "Hamko200", installDate: "2023-05-01" },
+            { id: "IPS-1", ratingWatts: 3200, batteryVoltage: 48, totalAh: 200, chargePercent: 100, brand: "Hamko200", installDate: "2026-11-18" },
            
         ],
         powerSpecs: { systemVoltage: 220, ipsRating: "3200W", batteryCount: "1x 200Ah", oltCount: 1, mikrotikModel: "CCR1036-12G-4S", switchCount: 1 },
@@ -586,7 +586,7 @@ let roomsData = [
         address: "Block-C, Road-02, Nakalpara, Dhaka",
         mainLine: "UP",
         ips: "STANDBY",
-        batteryLevel: "60%",
+        batteryLevel: "80%",
         temp: "21°C",
         ac: "N/A",
         pdu: "Normal",
@@ -595,7 +595,7 @@ let roomsData = [
         door: "OPEN ⚠️",
         window: "Closed",
         ipsList: [
-            { id: "IPS-1", ratingWatts: 1600, batteryVoltage: 24, totalAh: 200, chargePercent: 60, brand: "Hamko200", installDate: "2022-01-01" },
+            { id: "IPS-1", ratingWatts: 1000, batteryVoltage: 12, totalAh: 200, chargePercent: 60, brand: "Hamko200", installDate: "2025-01-01" },
         
            
         ],
@@ -603,7 +603,7 @@ let roomsData = [
         meterInfo: { accountNo: "998231412", balanceBDT: 340.00, lastRechargeDate: "2026-08-15", type: "Prepaid" },
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
-            { device: "IPS-1 (1600W2K Non-Brand)", serial: "IPS-24V-2001", installDate: "09-Jan-2025", warranty: "Active", watt: 0, sources: ["Grid"] },
+            { device: "IPS-1 (1000W1K Non-Brand)", serial: "IPS-12V-2001", installDate: "09-Jan-2025", warranty: "Active", watt: 0, sources: ["Grid"] },
             { device: "OLT VSOL", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "Grid"] },
             { device: "OLT VSOL", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "Grid"] },
             { device: "MikroTik CCR", serial: "MT-xxxxxxxxx", installDate: "00.00.0000", warranty: "Expired", watt: 80, maxWatt: 220, avgWatt: 80, sources: ["IPS-1", "Grid"] }, 
@@ -872,7 +872,7 @@ let roomsData = [
         address: "Manshi Market Road, Dakkhinkhan, Uttara, Dhaka",
         mainLine: "UP",
         ips: "STANDBY",
-        batteryLevel: "145%",
+        batteryLevel: "195%",
         temp: "21°C",
         ac: "N/A",
         pdu: "Normal",
@@ -881,7 +881,7 @@ let roomsData = [
         door: "OPEN ⚠️",
         window: "Closed",
         ipsList: [
-            { id: "IPS-1", ratingWatts: 2400, batteryVoltage: 96, totalAh: 200, chargePercent: 50, brand: "Hamko200", installDate: "2020-01-01" },
+            { id: "IPS-1", ratingWatts: 2400, batteryVoltage: 96, totalAh: 200, chargePercent: 100, brand: "Hamko200", installDate: "2026-11-16" },
             { id: "IPS-2", ratingWatts: 2400, batteryVoltage: 24, totalAh: 200, chargePercent: 95, brand: "Hamko200", installDate: "2026-05-01" },
            
         ],
@@ -889,7 +889,7 @@ let roomsData = [
         meterInfo: { accountNo: "998231412", balanceBDT: 340.00, lastRechargeDate: "2026-08-15", type: "Prepaid" },
         devices: { olt: "Online", mikrotik: "Online", switch: "Online", camera: "Online" },
         inventory: [
-            { device: "IPS-1 (2400W3K Kstar)", serial: "IPS-96V-2001", installDate: "09-Jan-2025", warranty: "Active", watt: 0, sources: ["Grid"] },
+            { device: "IPS-1 (2400W3K Kstar)", serial: "IPS-96V-2001", installDate: "16-Nov-2026", warranty: "Active", watt: 0, sources: ["Grid"] },
             { device: "IPS-2 (2400W3K Non-Brand)", serial: "IPS-24V-2001", installDate: "09-Jan-2025", warranty: "Active", watt: 0, sources: ["Grid"] },
             { device: "OLT Huawei", serial: "OLT-HWI-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 300, maxWatt: 1000, avgWatt: 300, sources: ["IPS-1", ""] },
             { device: "OLT VSOL", serial: "OLT-VSOL-xxxxxxxx", installDate: "00.00.0000", warranty: "Active", watt: 70, maxWatt: 220, avgWatt: 70, sources: ["IPS-1", "IPS-2"] },
